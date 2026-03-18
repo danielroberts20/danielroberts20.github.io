@@ -51,10 +51,18 @@ permalink: /cv/
           Benchmarked variety of segmentation algorithms against AutoPlait for unsupervised segmentation of human activity recognition data.
           Used the aeon Python library.
         </p>
+        <details class="cv-abstract">
+          <summary>Abstract</summary>
+          <p>Time series segmentation is a crucial step in the wider problem of human activity recognition. There are many algorithms that perform semantic segmentation of time series data, several of which are included in the open-source Python library <i>aeon</i>. How do these algorithms perform for the task of human activity recognition? Is there a better algorithm not yet included in <i>aeon</i>? This report implements a segmentation algorithm for time series data not currently present in the library; AutoPlait. We evaluate it and existing <i>aeon</i> algorithms on five human activity datasets and show that it performs in line with other algorithms currently present in <i>aeon</i>, achieving similar precision, recall and, F-score, in addition to providing information on any repeating or unique patterns in the data. We conclude with a critical evaluation of AutoPlait and its implementation, suggestion for further work, and a retrospective review of the project.</p>
+          <a href="{{ '/assets/pdf/report.pdf' | relative_url }}"
+            class="cv-abstract__download"
+            download>
+            ↓ Download dissertation (PDF)
+          </a>
+        </details>
       </div>
       <span class="cv-entry__period">2024 – 2025</span>
     </div>
-  </div>
 
   <div class="cv-section">
     <p class="cv-section__title">Experience</p>

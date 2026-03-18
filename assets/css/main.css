@@ -1346,3 +1346,75 @@ hr {
   .trip-stat--wide { grid-column: 1; }
   .trip-stat--location { grid-column: 1 / -1; }
 }
+
+/* =============================================================================
+   CV ABSTRACT (dissertation dropdown)
+   ============================================================================= */
+.cv-abstract {
+  margin-top: var(--space-md);
+  grid-column: 1 / -1;
+}
+
+.cv-abstract summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: color 0.2s var(--ease);
+  user-select: none;
+}
+
+.cv-abstract summary::-webkit-details-marker { display: none; }
+
+.cv-abstract summary::before {
+  content: '▸';
+  font-size: 0.65rem;
+  transition: transform 0.2s var(--ease);
+  display: inline-block;
+}
+
+.cv-abstract[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.cv-abstract summary:hover { color: var(--accent-bright); }
+
+.cv-abstract__body {
+  margin-top: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  border-left: 2px solid var(--accent);
+}
+
+.cv-abstract__body p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+.cv-abstract__download {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  border: 1px solid var(--border-bright);
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.cv-abstract__download:hover {
+  color: var(--accent-bright);
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}

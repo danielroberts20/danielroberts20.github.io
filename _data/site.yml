@@ -1,0 +1,38 @@
+nav:
+  - title: About
+    url: /about/
+  - title: Projects
+    url: /projects/
+  - title: Blog
+    url: /blog/
+  - title: CV
+    url: /cv/
+
+skills:
+  languages: [Python, SQL, Ruby, JavaScript, HTML/CSS, Bash]
+  ml: [Scikit-learn, aeon, PyTorch, HMMs, Clustering, Time Series, Anomaly Detection]
+  tools: [Docker, FastAPI, SQLite, Raspberry Pi, Tailscale, Git, Jekyll]
+  currently_learning: [ML on real-world GPS data, Dashboard design, Data storytelling]
+
+timeline:
+  - year: 2028
+    label: Canada WHV
+    type: travel
+  - year: 2027
+    label: SE Asia — Banana Pancake Trail
+    type: travel
+  - year: 2026–2027
+    label: New Zealand WHV
+    type: travel
+  - year: 2026
+    label: Australia WHV — TravelNet ML begins
+    type: highlight
+  - year: 2026
+    label: Summer camp lifeguarding, USA
+    type: travel
+  - year: 2025
+    label: CS degree awarded, dissertation on time series ML
+    type: highlight
+  - year: 2025
+    label: TravelNet system built and hardened
+    type: highlight

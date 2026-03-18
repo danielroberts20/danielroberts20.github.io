@@ -1,0 +1,39 @@
+- name: TravelNet
+  tagline: 3 years of personal data science, live from the road
+  description: >
+    A self-built data collection, analysis and visualisation system running on a Raspberry Pi
+    throughout a 3-year journey across the USA, Australia, New Zealand, SE Asia and Canada.
+    Captures location, health, financial and contextual data continuously — then applies
+    machine learning to find patterns across it all.
+  detail: >
+    Built a FastAPI backend on Raspberry Pi with SQLite, Docker, Tailscale remote access
+    and Cloudflare R2 offsite backups. Data pipelines ingest GPS traces (iOS Shortcuts + Overland),
+    Apple Health exports, and multi-currency financial data (Revolut, Wise, cash).
+    ML work — clustering, HMMs, anomaly detection, time series regression — begins once
+    in Australia with the US leg as baseline. Dashboard and public anonymised demo dataset
+    planned for GitHub.
+  tags: [Python, FastAPI, SQLite, Docker, Scikit-learn, HMMs, Time Series, Raspberry Pi]
+  status: live
+  status_label: Live & collecting data
+  github: https://github.com/danielroberts20/travelnet
+  demo: # add when live
+  featured: true
+  year: 2025–2028
+
+- name: Time Series ML Dissertation
+  tagline: Comparing HMMs and AutoPlait for GPS travel segmentation
+  description: >
+    Final year CS dissertation exploring unsupervised segmentation of GPS time series data
+    using Hidden Markov Models and AutoPlait via the aeon Python library.
+    Investigated how different approaches handle the noise and irregularity of real-world
+    mobility traces.
+  detail: >
+    Used the aeon library for time series machine learning, implementing and benchmarking
+    multiple approaches to segmenting continuous GPS tracks into meaningful travel episodes.
+    Results fed directly into the TravelNet ML architecture.
+  tags: [Python, aeon, HMMs, AutoPlait, Time Series, GPS, Segmentation]
+  status: complete
+  status_label: Completed 2025
+  github: # add your dissertation repo if public
+  featured: true
+  year: 2025

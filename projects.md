@@ -1,0 +1,55 @@
+---
+layout: base
+title: Projects
+permalink: /projects/
+---
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero__label">Projects</span>
+    <h1 class="page-hero__title">Things I'm building</h1>
+    <p class="page-hero__desc">
+      A mix of long-running data science projects and academic work.
+      TravelNet is the centrepiece — everything else feeds into it or runs alongside it.
+    </p>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="page-body-inner">
+    <div class="projects-grid">
+      {% for project in site.data.projects %}
+      <div class="project-card{% if project.featured and forloop.first %} project-card--featured{% endif %}">
+        <div class="project-header">
+          <div>
+            <p class="project-tagline">{{ project.tagline }}</p>
+            <h2 class="project-name">{{ project.name }}</h2>
+          </div>
+          <span class="project-status project-status--{{ project.status }}">{{ project.status_label }}</span>
+        </div>
+
+        <p class="project-desc">{{ project.description }}</p>
+
+        {% if project.detail %}
+        <p class="project-desc" style="color: var(--text-muted); font-size: 0.9rem;">{{ project.detail }}</p>
+        {% endif %}
+
+        <div class="project-tags">
+          {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+
+        <div class="project-links">
+          {% if project.github %}
+            <a href="{{ project.github }}" class="project-link" target="_blank" rel="noopener">↗ GitHub</a>
+          {% endif %}
+          {% if project.demo %}
+            <a href="{{ project.demo }}" class="project-link" target="_blank" rel="noopener">↗ Live demo</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

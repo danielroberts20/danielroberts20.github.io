@@ -7,28 +7,31 @@ title: Home
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
   <div class="hero-inner">
-    <p class="hero-eyebrow">Dan Roberts</p>
-    <h1 class="hero-title">Data scientist,<br><em>traveller</em>,<br>lifeguard.</h1>
-    <p class="hero-bio">
-      CS graduate building a 3-year personal data science project from the road.
-      Currently hardening TravelNet — a live system collecting location, health and
-      financial data across 6 countries — before departure in June 2026.
-    </p>
-    {% assign today = 'now' | date: "%Y-%m-%d" %}
-    {% assign current_status = site.data.site.status_schedule[0] %}
-    {% for entry in site.data.site.status_schedule %}
-      {% if entry.from <= today %}
-        {% assign current_status = entry %}
-      {% endif %}
-    {% endfor %}
-    <div class="hero-status">
-      <span class="hero-status__dot"></span>
-      {{ current_status.pill }}
+    <div class="hero-left">
+      <p class="hero-eyebrow">Dan Roberts</p>
+      <h1 class="hero-title">Data scientist,<br><em>traveller</em>,<br>lifeguard.</h1>
+      <p class="hero-bio">
+        CS graduate building a 3-year personal data science project from the road.
+        Currently hardening TravelNet — a live system collecting location, health and
+        financial data across 6 countries — before departure in June 2026.
+      </p>
+      {% assign today = 'now' | date: "%Y-%m-%d" %}
+      {% assign current_status = site.data.site.status_schedule[0] %}
+      {% for entry in site.data.site.status_schedule %}
+        {% if entry.from <= today %}
+          {% assign current_status = entry %}
+        {% endif %}
+      {% endfor %}
+      <div class="hero-status">
+        <span class="hero-status__dot"></span>
+        {{ current_status.pill }}
+      </div>
+      <div class="hero-ctas">
+        <a href="/projects/" class="btn btn--primary">View Projects</a>
+        <a href="/about/" class="btn btn--secondary">About Me</a>
+      </div>
     </div>
-    <div class="hero-ctas">
-      <a href="/projects/" class="btn btn--primary">View Projects</a>
-      <a href="/about/" class="btn btn--secondary">About Me</a>
-    </div>
+    {% include hero-panel.html %}
   </div>
 </section>
 

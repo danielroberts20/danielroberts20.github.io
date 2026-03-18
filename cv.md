@@ -9,7 +9,7 @@ permalink: /cv/
     <div>
       <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; display:block; margin-bottom: var(--space-sm);">CV</span>
       <h1 style="margin-bottom: var(--space-sm);">Dan Roberts</h1>
-      <p style="font-size: 0.95rem;">Data scientist · <a href="https://github.com/danielroberts20" style="color: var(--accent-bright);">github.com/danielroberts20</a></p>
+      <p style="font-size: 0.95rem;">Data scientist · <a href="https://github.com/danielroberts20" style="color: var(--accent-bright);">github.com/danielroberts20</a> · <a href="https://github.com/danielroberts20" style="color: var(--accent-bright);">daniel.roberts20@outlook.com</a></p>
     </div>
     <!-- Uncomment when you have a PDF CV ready:
     <a href="/assets/files/dan-roberts-cv.pdf" class="btn btn--primary" download>↓ Download PDF</a>

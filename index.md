@@ -12,9 +12,16 @@ title: Home
       Currently hardening TravelNet — a live system collecting location, health and
       financial data across 6 countries — before departure in June 2026.
     </p>
+    {% assign today = 'now' | date: "%Y-%m-%d" %}
+    {% assign current_status = site.data.site.status_schedule[0] %}
+    {% for entry in site.data.site.status_schedule %}
+      {% if entry.from <= today %}
+        {% assign current_status = entry %}
+      {% endif %}
+    {% endfor %}
     <div class="hero-status">
       <span class="hero-status__dot"></span>
-      Pre-departure · Philadelphia/DC → USA → Fiji → Australia · June 2026
+      {{ current_status.pill }}
     </div>
     <div class="hero-ctas">
       <a href="/projects/" class="btn btn--primary">View Projects</a>

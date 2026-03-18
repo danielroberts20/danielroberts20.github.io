@@ -22,8 +22,8 @@
       <span class="trip-map-label__dot"></span>
       Trip route · 2026–2028
     </div>
-    <svg id="trip-map-svg" class="trip-map-svg" viewBox="0 0 520 260" aria-label="Trip route map">
-      <rect width="520" height="260" fill="#0d1610"/>
+    <svg id="trip-map-svg" class="trip-map-svg" viewBox="0 0 520 300" aria-label="Trip route map">
+      <rect width="520" height="300" fill="#0d1610"/>
     </svg>
   </div>
 
@@ -83,12 +83,12 @@
       return;
     }
 
-    var W = 520, H = 260;
+    var W = 520, H = 300;
     var svg = d3.select('#trip-map-svg');
 
     var projection = d3.geoNaturalEarth1()
       .scale(85)
-      .translate([W / 2, H / 2 + 10]);
+      .translate([W / 2, H / 2 + 15]);
 
     var path = d3.geoPath().projection(projection);
 

@@ -414,9 +414,10 @@ hr {
 /* Two-column hero layout */
 .hero-inner {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr 440px;
   gap: var(--space-2xl);
-  align-items: center;
+  align-items: start;
+  padding-top: var(--space-lg);
 }
 
 .hero-left {}
@@ -1277,9 +1278,13 @@ hr {
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-links { display: none; }
   .footer-right { grid-column: 2; }
-  /* Hero collapses to single column on tablet */
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-panel { display: none; } /* hide panel on tablet â€” hero text takes full width */
+  /* Hero collapses to single column â€” panel stacks below text */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+  .hero-panel { display: flex; } /* visible, stacked below hero-left */
+  .trip-map-card svg { height: 220px; } /* slightly shorter on tablet */
 }
 
 @media (max-width: 680px) {
@@ -1313,4 +1318,9 @@ hr {
   .footer-inner { grid-template-columns: 1fr; text-align: left; }
   .footer-right { text-align: left; grid-column: 1; }
   .cv-entry { grid-template-columns: 1fr; }
+
+  /* Stats card grid goes 2-col on small screens */
+  .trip-stats-grid { grid-template-columns: 1fr 1fr; }
+  .trip-stat--wide { grid-column: 1; }
+  .trip-stat--location { grid-column: 1 / -1; }
 }

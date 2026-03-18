@@ -1,3 +1,34 @@
+# Update this as the trip evolves. Commit = rebuild = status updates automatically.
+status_schedule:
+  - from: "2026-01-01"
+    pill: "Pre-departure · Building TravelNet · UK"
+    label: Pre-departure hardening
+    description: Building and stress-testing TravelNet before the June 2026 departure. Ireland dry run complete.
+  - from: "2026-06-06"
+    pill: "In transit · USA Summer Camp · Lifeguarding"
+    label: USA — Summer camp
+    description: Lifeguarding at a summer camp in the USA. TravelNet collecting data from day zero.
+  - from: "2026-08-15"
+    pill: "In transit · Seattle → Fiji → Australia"
+    label: En route to Australia
+    description: Travelling west — Seattle, Fiji stopover, then landing in Australia on the WHV.
+  - from: "2026-09-15"
+    pill: "Currently in Australia · WHV · TravelNet ML begins"
+    label: Australia — Working Holiday Visa
+    description: Based in Australia on a Working Holiday Visa. ML work on TravelNet underway — clustering, HMMs, anomaly detection.
+  - from: "2027-09-01"
+    pill: "Currently in New Zealand · WHV"
+    label: New Zealand — Working Holiday Visa
+    description: New Zealand on a Working Holiday Visa. TravelNet dataset growing.
+  - from: "2028-04-01"
+    pill: "Currently in SE Asia · Banana Pancake Trail"
+    label: SE Asia — Backpacking
+    description: Backpacking through SE Asia — the Banana Pancake Trail. 3-4 months of dense travel data.
+  - from: "2028-08-01"
+    pill: "Currently in Canada · WHV · Final leg"
+    label: Canada — Working Holiday Visa
+    description: Final leg of the trip — Canada on a Working Holiday Visa.
+
 nav:
   - title: About
     url: /about/
@@ -9,30 +40,31 @@ nav:
     url: /cv/
 
 skills:
-  languages: [Python, SQL, Ruby, JavaScript, HTML/CSS, Bash]
+  languages: [Python, SQL, Java]
   ml: [Scikit-learn, aeon, PyTorch, HMMs, Clustering, Time Series, Anomaly Detection]
-  tools: [Docker, FastAPI, SQLite, Raspberry Pi, Tailscale, Git, Jekyll]
+  tools: [Docker, FastAPI, SQLite, Raspberry Pi, Tailscale, Git]
   currently_learning: [ML on real-world GPS data, Dashboard design, Data storytelling]
 
 timeline:
-  - year: 2028
+  - year: 2028-2029
     label: Canada WHV
     type: travel
-  - year: 2027
+  - year: 2027-2028
     label: SE Asia — Banana Pancake Trail
     type: travel
-  - year: 2026–2027
+  - year: 2027
     label: New Zealand WHV
     type: travel
-  - year: 2026
+  - year: 2026-2027
     label: Australia WHV — TravelNet ML begins
     type: highlight
   - year: 2026
     label: Summer camp lifeguarding, USA
     type: travel
+  - year: 2026
+    label: TravelNet system built and hardened
+    type: highlight
   - year: 2025
     label: CS degree awarded, dissertation on time series ML
     type: highlight
-  - year: 2025
-    label: TravelNet system built and hardened
-    type: highlight
+

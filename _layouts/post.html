@@ -3,6 +3,9 @@ layout: base
 ---
 
 <article class="post-wrapper">
+  {% if page.image %}
+  <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-hero-image">
+  {% endif %}
   <header class="post-header">
     <div class="post-meta-top">
       {% if page.categories %}

@@ -16,9 +16,9 @@
   status: live
   status_label: Live & collecting data
   github: https://github.com/danielroberts20/travelnet
-  demo: # add when live
+  demo: https://danielroberts20.github.io/TravelNet
   featured: true
-  year: 2025–2028
+  year: 2026–2029
 
 - name: Time Series ML Dissertation
   tagline: Comparing HMMs and AutoPlait for GPS travel segmentation

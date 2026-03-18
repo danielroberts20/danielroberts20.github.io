@@ -8,6 +8,8 @@ status_schedule:
     countries_visited: 0
     km_travelled: 0
     on_road: false
+    map_x: 235
+    map_y: 46
 
   - from: "2026-06-06"
     pill: "In transit · USA Summer Camp · Lifeguarding"
@@ -18,6 +20,8 @@ status_schedule:
     km_travelled: 5500
     on_road: true
     departure_date: "2026-06-11"
+    map_x: 88
+    map_y: 64
 
   - from: "2026-08-15"
     pill: "In transit · Seattle → Fiji → Australia"
@@ -28,6 +32,8 @@ status_schedule:
     km_travelled: 11000
     on_road: true
     departure_date: "2026-06-11"
+    map_x: 58
+    map_y: 50
 
   - from: "2026-09-15"
     pill: "Currently in Australia · WHV · TravelNet ML begins"
@@ -38,6 +44,8 @@ status_schedule:
     km_travelled: 17000
     on_road: true
     departure_date: "2026-06-11"
+    map_x: 428
+    map_y: 172
 
   - from: "2027-09-01"
     pill: "Currently in New Zealand · WHV"
@@ -48,6 +56,8 @@ status_schedule:
     km_travelled: 21000
     on_road: true
     departure_date: "2026-06-11"
+    map_x: 471
+    map_y: 193
 
   - from: "2028-04-01"
     pill: "Currently in SE Asia · Banana Pancake Trail"
@@ -58,6 +68,8 @@ status_schedule:
     km_travelled: 32000
     on_road: true
     departure_date: "2026-06-11"
+    map_x: 378
+    map_y: 92
 
   - from: "2028-08-01"
     pill: "Currently in Canada · WHV · Final leg"
@@ -68,6 +80,8 @@ status_schedule:
     km_travelled: 48000
     on_road: true
     departure_date: "2026-06-11"
+    map_x: 80
+    map_y: 46
 
 nav:
   - title: About

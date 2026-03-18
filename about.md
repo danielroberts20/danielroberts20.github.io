@@ -18,7 +18,7 @@ permalink: /about/
       </p>
       <p>
         My academic background is in machine learning on time series data. My dissertation
-        compared Hidden Markov Models and AutoPlait for GPS travel segmentation using the
+        implemented and compared AutoPlait to existing time series segmentation algorithms for human activity recognition using the
         <a href="https://www.aeon-toolkit.org/" target="_blank" rel="noopener">aeon Python library</a>
         — work that feeds directly into TravelNet's ML pipeline.
       </p>
@@ -30,10 +30,17 @@ permalink: /about/
     </div>
 
     <div class="about-sidebar">
+      {% assign today = 'now' | date: "%Y-%m-%d" %}
+      {% assign current_status = site.data.site.status_schedule[0] %}
+      {% for entry in site.data.site.status_schedule %}
+        {% if entry.from <= today %}
+          {% assign current_status = entry %}
+        {% endif %}
+      {% endfor %}
       <div class="sidebar-card">
         <span class="sidebar-card__label">Currently</span>
-        <h4 class="sidebar-card__title">Pre-departure hardening</h4>
-        <p>Building and stress-testing TravelNet before the June 2026 departure. Ireland dry run complete.</p>
+        <h4 class="sidebar-card__title">{{ current_status.label }}</h4>
+        <p>{{ current_status.description }}</p>
         <a href="https://github.com/danielroberts20" class="btn btn--secondary" target="_blank" rel="noopener" style="width:100%;justify-content:center;">↗ GitHub</a>
       </div>
 
@@ -64,12 +71,12 @@ permalink: /about/
       My CS degree gave me the foundations; my dissertation gave me a real project to sink my teeth into.
       I'm interested in the messier, harder end of data science — real-world GPS traces rather than
       clean benchmark datasets, multi-currency financial data with missing values and format inconsistencies,
-      health data subject to sensor dropouts.
+      health data subject to sensor dropouts. I enjoy looking for meaningful connections between data sources and using ML techniques to gain interesting insights, simply for the fact that they are interesting.
     </p>
     <p>
       TravelNet is where that interest becomes practice. When I get to Australia I'll have three months
-      of US data as a baseline and start the ML work in earnest: clustering travel behaviours,
-      anomaly detection on spending, activity segmentation on GPS traces.
+      of US data as a baseline and start the ML work: clustering travel behaviours,
+      anomaly detection on spending, activity segmentation on GPS traces. I'll be able to automatically identify different workplaces I atteneded, coffee shops I visited, daytrips I took, activities I did and much more.
     </p>
     <p>
       Python is my primary language. I use scikit-learn as my ML workhorse, with PyTorch on the table
@@ -82,13 +89,12 @@ permalink: /about/
     <span class="about-section__label">Personal</span>
     <h2>Lifeguarding & swimming</h2>
     <p>
-      Before I was a programmer I was a lifeguard. I've been teaching swimming and working poolside
-      for years — it's one of those jobs that makes you genuinely useful in the world in a way
-      that writing software rarely does. This summer I'm back at it: lifeguarding at a US summer camp
-      for two months before the main trip begins.
+      Before I was a programmer I was a swimmer. I've been on poolside
+      for years;  both swimming and guarding - water is something I (quite literally) cannot live without.
+      This summer I'm returning to my favourite job: lifeguarding at a US summer camp for two months for the fourth year in a row. 
     </p>
     <p>
-      It keeps me sane, keeps me fit, and is a good reminder that not everything worth doing
+      It keeps me fit, keeps me outside, keeps me social, and is a good reminder that not everything worth doing
       involves a terminal window.
     </p>
   </div>
@@ -100,12 +106,13 @@ permalink: /about/
       June 2026: I leave. The rough itinerary is Philadelphia/DC → USA summer camp →
       Seattle → Fiji (3-night stopover) → Australia on a Working Holiday Visa →
       New Zealand on a WHV → SE Asia backpacking (the Banana Pancake Trail, 3–4 months) →
-      Canada on a WHV. Somewhere in there, a dissertation-worthy dataset gets built.
+      Canada on a WHV. Somewhere in there, a dissertation-worthy dataset gets built (and hopefully,
+      some liflong memories and friends).
     </p>
     <p>
       The trip isn't a gap year. It's a deliberate decision to spend a few years being
-      somewhere uncomfortable, meeting people I wouldn't otherwise meet, and generating
-      data I couldn't collect any other way. TravelNet is how I make that data useful.
+      somewhere uncomfortable, meeting people I wouldn't otherwise meet, experiencing the 
+      world, and generatingdata I couldn't collect any other way. TravelNet is how I make that data useful.
     </p>
 
     <div class="timeline">

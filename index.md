@@ -87,8 +87,11 @@ title: Home
 
     <div class="post-list">
       {% for post in site.posts limit:3 %}
-      <a href="{{ post.url | relative_url }}" class="post-card">
+      <a href="{{ post.url | relative_url }}" class="post-card{% if post.image %} post-card--has-thumb{% endif %}">
         <span class="post-card__date">{{ post.date | date: "%b %Y" }}</span>
+        {% if post.image %}
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-card__thumb">
+        {% endif %}
         <div>
           {% if post.categories %}
             <span class="post-card__category post-category--{{ post.categories[0] | downcase }}">

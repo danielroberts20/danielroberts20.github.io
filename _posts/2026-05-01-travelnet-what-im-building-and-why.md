@@ -6,7 +6,6 @@ date: 2026-05-01
 categories: [Technical]
 tags: [TravelNet, Python, Raspberry Pi, Data Collection, FastAPI, SQLite]
 read_time: 8
-image: /assets/images/posts/delicate.jpg
 excerpt: >
   In June 2026 I'm leaving for a 3-year trip across six countries. I'm also
   bringing a Raspberry Pi, a structured data schema, and a plan to turn the whole

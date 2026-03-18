@@ -27,8 +27,11 @@ permalink: /blog/
       <h2 style="font-size:1rem; font-family: var(--font-mono); color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-xl); font-weight:400;">Technical</h2>
       <div class="post-list">
         {% for post in technical_posts %}
-        <a href="{{ post.url | relative_url }}" class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-card{% if post.image %} post-card--has-thumb{% endif %}">
           <span class="post-card__date">{{ post.date | date: "%b %Y" }}</span>
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-card__thumb">
+          {% endif %}
           <div>
             <span class="post-card__category post-category--technical">Technical</span>
             <h3 class="post-card__title">{{ post.title }}</h3>
@@ -45,8 +48,11 @@ permalink: /blog/
       <h2 style="font-size:1rem; font-family: var(--font-mono); color: var(--warm); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-xl); font-weight:400;">Travel</h2>
       <div class="post-list">
         {% for post in travel_posts %}
-        <a href="{{ post.url | relative_url }}" class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-card{% if post.image %} post-card--has-thumb{% endif %}">
           <span class="post-card__date">{{ post.date | date: "%b %Y" }}</span>
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-card__thumb">
+          {% endif %}
           <div>
             <span class="post-card__category post-category--travel">Travel</span>
             <h3 class="post-card__title">{{ post.title }}</h3>

@@ -757,12 +757,32 @@ hr {
   text-decoration: none;
   transition: border-color 0.25s var(--ease), transform 0.25s var(--ease), background 0.25s var(--ease);
   align-items: start;
+  overflow: hidden;
+}
+
+/* When a thumbnail is present, insert it as a third column between date and content */
+.post-card--has-thumb {
+  grid-template-columns: auto 140px 1fr;
 }
 
 .post-card:hover {
   border-color: var(--border-bright);
   background: var(--bg-card-hover);
   transform: translateY(-2px);
+}
+
+.post-card__thumb {
+  width: 140px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+  transition: opacity 0.25s var(--ease);
+}
+
+.post-card:hover .post-card__thumb {
+  opacity: 0.85;
 }
 
 .post-card__date {
@@ -1313,6 +1333,8 @@ hr {
   .nav-toggle { display: flex; }
 
   .post-card { grid-template-columns: 1fr; }
+  .post-card--has-thumb { grid-template-columns: 1fr; }
+  .post-card__thumb { width: 100%; aspect-ratio: 16 / 7; }
   .post-card__date { writing-mode: horizontal-tb; transform: none; }
   .post-nav { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; text-align: left; }

@@ -4,6 +4,7 @@ title: "4n4 — What is an `Out West Wednesday`?"
 subtitle: "A trip of a lifetime in Arizona, Utah, Wyoming and Colorado in summer 2025"
 date: 2026-03-18
 categories: [Travel]
+image: /assets/images/posts/delicate.jpg
 tags: [Camp, Echo Lake, 4n4, Summer]
 read_time: 100
 excerpt: >

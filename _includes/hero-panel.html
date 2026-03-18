@@ -7,8 +7,7 @@
 {% endfor %}
 
 {% if status.on_road %}
-  {% assign departure = status.departure_date %}
-  {% assign dep_ts = departure | date: "%s" | plus: 0 %}
+  {% assign dep_ts = status.departure_date | date: "%s" | plus: 0 %}
   {% assign now_ts = today | date: "%s" | plus: 0 %}
   {% assign diff_s = now_ts | minus: dep_ts %}
   {% assign days_on_road = diff_s | divided_by: 86400 %}
@@ -18,220 +17,38 @@
 
 <div class="hero-panel">
 
-  <!-- Trip route map -->
   <div class="trip-map-card">
     <div class="trip-map-label">
       <span class="trip-map-label__dot"></span>
       Trip route · 2026–2028
     </div>
-    <svg class="trip-map-svg" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" aria-label="Trip route map">
-
-      <!-- Ocean background -->
-      <rect width="520" height="300" fill="#0d1610" rx="8"/>
-
-      <!-- Subtle grid lines -->
-      <g stroke="rgba(180,210,180,0.04)" stroke-width="0.5">
-        <line x1="0" y1="60" x2="520" y2="60"/>
-        <line x1="0" y1="120" x2="520" y2="120"/>
-        <line x1="0" y1="180" x2="520" y2="180"/>
-        <line x1="0" y1="240" x2="520" y2="240"/>
-        <line x1="104" y1="0" x2="104" y2="300"/>
-        <line x1="208" y1="0" x2="208" y2="300"/>
-        <line x1="312" y1="0" x2="312" y2="300"/>
-        <line x1="416" y1="0" x2="416" y2="300"/>
-      </g>
-
-      <!-- Simplified landmasses -->
-      <!-- Europe / UK -->
-      <path d="M228,42 L232,38 L238,36 L244,38 L248,44 L252,48 L250,54 L244,58 L238,60 L232,58 L226,52 Z" fill="rgba(90,120,90,0.35)" stroke="rgba(120,160,120,0.2)" stroke-width="0.5"/>
-      <!-- UK blob -->
-      <path d="M228,34 L232,30 L236,30 L238,34 L236,38 L232,38 Z" fill="rgba(90,120,90,0.35)" stroke="rgba(120,160,120,0.2)" stroke-width="0.5"/>
-
-      <!-- North America -->
-      <path d="M52,28 L88,24 L110,28 L124,36 L128,48 L122,60 L116,72 L108,82 L96,88 L84,86 L72,80 L60,72 L50,60 L46,48 L48,36 Z" fill="rgba(90,120,90,0.35)" stroke="rgba(120,160,120,0.2)" stroke-width="0.5"/>
-      <!-- Florida/SE extension -->
-      <path d="M96,88 L100,96 L96,100 L90,96 L90,88 Z" fill="rgba(90,120,90,0.3)" stroke="rgba(120,160,120,0.2)" stroke-width="0.5"/>
-
-      <!-- Africa hint -->
-      <path d="M228,80 L244,76 L256,84 L260,100 L256,120 L244,134 L232,132 L224,116 L220,100 L222,84 Z" fill="rgba(90,120,90,0.25)" stroke="rgba(120,160,120,0.15)" stroke-width="0.5"/>
-
-      <!-- South America hint -->
-      <path d="M116,108 L132,104 L140,116 L138,136 L128,152 L116,156 L106,144 L104,128 L108,114 Z" fill="rgba(90,120,90,0.25)" stroke="rgba(120,160,120,0.15)" stroke-width="0.5"/>
-
-      <!-- India subcontinent -->
-      <path d="M320,76 L334,72 L342,80 L340,96 L330,106 L318,100 L314,88 Z" fill="rgba(90,120,90,0.3)" stroke="rgba(120,160,120,0.15)" stroke-width="0.5"/>
-
-      <!-- SE Asia cluster -->
-      <path d="M368,80 L382,76 L392,82 L394,94 L384,102 L372,100 L364,92 Z" fill="rgba(90,120,90,0.3)" stroke="rgba(120,160,120,0.15)" stroke-width="0.5"/>
-      <!-- Thailand/Malaysia peninsula -->
-      <path d="M376,102 L380,114 L376,122 L372,118 L370,106 Z" fill="rgba(90,120,90,0.28)" stroke="rgba(120,160,120,0.15)" stroke-width="0.5"/>
-      <!-- Indonesia hint -->
-      <path d="M380,118 L396,114 L404,118 L400,124 L384,124 Z" fill="rgba(90,120,90,0.25)" stroke="rgba(120,160,120,0.15)" stroke-width="0.5"/>
-
-      <!-- Australia -->
-      <path d="M398,152 L428,144 L452,148 L464,162 L464,182 L452,196 L430,202 L408,198 L394,184 L390,168 Z" fill="rgba(90,120,90,0.38)" stroke="rgba(120,160,120,0.2)" stroke-width="0.5"/>
-
-      <!-- New Zealand -->
-      <path d="M468,188 L474,182 L478,188 L476,198 L470,200 L466,194 Z" fill="rgba(90,120,90,0.35)" stroke="rgba(120,160,120,0.2)" stroke-width="0.5"/>
-      <path d="M472,202 L476,198 L478,206 L474,210 L470,206 Z" fill="rgba(90,120,90,0.3)" stroke="rgba(120,160,120,0.2)" stroke-width="0.5"/>
-
-      <!-- Japan hint -->
-      <path d="M436,54 L440,50 L444,54 L442,62 L438,62 Z" fill="rgba(90,120,90,0.25)" stroke="rgba(120,160,120,0.15)" stroke-width="0.5"/>
-
-      <!-- Canada top -->
-      <path d="M52,20 L88,16 L108,20 L110,28 L88,24 L52,28 Z" fill="rgba(90,120,90,0.28)" stroke="rgba(120,160,120,0.15)" stroke-width="0.5"/>
-
-      <!--
-        Route stops (SVG coordinates):
-        UK       → x=235, y=46
-        USA      → x=88,  y=64
-        Seattle  → x=58,  y=50
-        Fiji     → x=472, y=164  (wraps — shown on right edge)
-        Australia→ x=428, y=172
-        NZ       → x=471, y=193
-        SE Asia  → x=378, y=92
-        Canada   → x=80,  y=46
-
-        Route drawn as curved path segments
-      -->
-
-      <!-- Route path — dashed, glowing -->
-      <!-- UK → USA (Atlantic crossing) -->
-      <path d="M235,46 Q180,30 88,64"
-            fill="none" stroke="rgba(196,150,90,0.25)" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <path d="M235,46 Q180,30 88,64"
-            fill="none" stroke="rgba(196,150,90,0.6)" stroke-width="1" stroke-dasharray="4,3"/>
-
-      <!-- USA → Seattle -->
-      <path d="M88,64 Q72,58 58,50"
-            fill="none" stroke="rgba(196,150,90,0.25)" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <path d="M88,64 Q72,58 58,50"
-            fill="none" stroke="rgba(196,150,90,0.6)" stroke-width="1" stroke-dasharray="4,3"/>
-
-      <!-- Seattle → Fiji (Pacific — long arc going right off edge, shown as dashed curve going to right) -->
-      <path d="M58,50 Q260,20 472,164"
-            fill="none" stroke="rgba(196,150,90,0.2)" stroke-width="1.5" stroke-dasharray="5,4"/>
-      <path d="M58,50 Q260,20 472,164"
-            fill="none" stroke="rgba(196,150,90,0.5)" stroke-width="0.8" stroke-dasharray="5,4"/>
-
-      <!-- Fiji → Australia -->
-      <path d="M472,164 Q454,162 428,172"
-            fill="none" stroke="rgba(196,150,90,0.25)" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <path d="M472,164 Q454,162 428,172"
-            fill="none" stroke="rgba(196,150,90,0.6)" stroke-width="1" stroke-dasharray="4,3"/>
-
-      <!-- Australia → NZ -->
-      <path d="M428,172 Q452,178 471,193"
-            fill="none" stroke="rgba(196,150,90,0.25)" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <path d="M428,172 Q452,178 471,193"
-            fill="none" stroke="rgba(196,150,90,0.6)" stroke-width="1" stroke-dasharray="4,3"/>
-
-      <!-- NZ → SE Asia -->
-      <path d="M471,193 Q430,140 378,92"
-            fill="none" stroke="rgba(196,150,90,0.25)" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <path d="M471,193 Q430,140 378,92"
-            fill="none" stroke="rgba(196,150,90,0.6)" stroke-width="1" stroke-dasharray="4,3"/>
-
-      <!-- SE Asia → Canada (westward arc) -->
-      <path d="M378,92 Q440,40 500,50"
-            fill="none" stroke="rgba(196,150,90,0.2)" stroke-width="1.5" stroke-dasharray="5,4"/>
-      <!-- wrap continues from left edge -->
-      <path d="M20,50 Q50,46 80,46"
-            fill="none" stroke="rgba(196,150,90,0.2)" stroke-width="1.5" stroke-dasharray="5,4"/>
-      <path d="M378,92 Q440,40 500,50"
-            fill="none" stroke="rgba(196,150,90,0.45)" stroke-width="0.8" stroke-dasharray="5,4"/>
-      <path d="M20,50 Q50,46 80,46"
-            fill="none" stroke="rgba(196,150,90,0.45)" stroke-width="0.8" stroke-dasharray="5,4"/>
-
-      <!-- Stop dots — visited stops glow green, future stops are dim -->
-      {% assign stops = site.data.site.trip_stops %}
-
-      <!-- UK — always visited (departure point) -->
-      <circle cx="235" cy="46" r="4" fill="#0b0f0d" stroke="rgba(90,158,114,0.9)" stroke-width="1.5"/>
-      <circle cx="235" cy="46" r="2" fill="rgba(90,158,114,0.8)"/>
-      <circle cx="235" cy="46" r="7" fill="none" stroke="rgba(90,158,114,0.15)" stroke-width="1"/>
-
-      <!-- USA -->
-      <circle cx="88" cy="64" r="4" fill="#0d1610" stroke="rgba(196,150,90,0.5)" stroke-width="1.5"/>
-      <circle cx="88" cy="64" r="2" fill="rgba(196,150,90,0.4)"/>
-
-      <!-- Seattle -->
-      <circle cx="58" cy="50" r="3.5" fill="#0d1610" stroke="rgba(196,150,90,0.5)" stroke-width="1.5"/>
-      <circle cx="58" cy="50" r="1.5" fill="rgba(196,150,90,0.4)"/>
-
-      <!-- Fiji -->
-      <circle cx="472" cy="164" r="3.5" fill="#0d1610" stroke="rgba(196,150,90,0.5)" stroke-width="1.5"/>
-      <circle cx="472" cy="164" r="1.5" fill="rgba(196,150,90,0.4)"/>
-
-      <!-- Australia -->
-      <circle cx="428" cy="172" r="4" fill="#0d1610" stroke="rgba(196,150,90,0.5)" stroke-width="1.5"/>
-      <circle cx="428" cy="172" r="2" fill="rgba(196,150,90,0.4)"/>
-
-      <!-- NZ -->
-      <circle cx="471" cy="193" r="3.5" fill="#0d1610" stroke="rgba(196,150,90,0.5)" stroke-width="1.5"/>
-      <circle cx="471" cy="193" r="1.5" fill="rgba(196,150,90,0.4)"/>
-
-      <!-- SE Asia -->
-      <circle cx="378" cy="92" r="3.5" fill="#0d1610" stroke="rgba(196,150,90,0.5)" stroke-width="1.5"/>
-      <circle cx="378" cy="92" r="1.5" fill="rgba(196,150,90,0.4)"/>
-
-      <!-- Canada -->
-      <circle cx="80" cy="46" r="4" fill="#0d1610" stroke="rgba(196,150,90,0.5)" stroke-width="1.5"/>
-      <circle cx="80" cy="46" r="2" fill="rgba(196,150,90,0.4)"/>
-
-      <!-- Stop labels -->
-      <text x="235" y="38" text-anchor="middle" fill="rgba(238,238,228,0.7)" font-size="7" font-family="JetBrains Mono, monospace">UK</text>
-      <text x="88" y="56" text-anchor="middle" fill="rgba(238,238,228,0.7)" font-size="7" font-family="JetBrains Mono, monospace">USA</text>
-      <text x="46" y="44" text-anchor="middle" fill="rgba(238,238,228,0.7)" font-size="7" font-family="JetBrains Mono, monospace">SEA</text>
-      <text x="472" y="156" text-anchor="middle" fill="rgba(238,238,228,0.7)" font-size="7" font-family="JetBrains Mono, monospace">FJI</text>
-      <text x="428" y="164" text-anchor="middle" fill="rgba(238,238,228,0.7)" font-size="7" font-family="JetBrains Mono, monospace">AUS</text>
-      <text x="487" y="193" text-anchor="middle" fill="rgba(238,238,228,0.7)" font-size="7" font-family="JetBrains Mono, monospace">NZ</text>
-      <text x="378" y="84" text-anchor="middle" fill="rgba(238,238,228,0.7)" font-size="7" font-family="JetBrains Mono, monospace">SEA</text>
-      <text x="80" y="38" text-anchor="middle" fill="rgba(238,238,228,0.7)" font-size="7" font-family="JetBrains Mono, monospace">CAN</text>
-
-      <!-- Active location pulse — rendered by JS based on current status -->
-      <circle id="active-pulse" cx="235" cy="46" r="8" fill="none" stroke="rgba(90,158,114,0.5)" stroke-width="1">
-        <animate attributeName="r" values="6;14;6" dur="3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite"/>
-      </circle>
-
+    <svg id="trip-map-svg" class="trip-map-svg" viewBox="0 0 520 260" aria-label="Trip route map">
+      <rect width="520" height="260" fill="#0d1610"/>
     </svg>
   </div>
 
-  <!-- Stats card -->
   <div class="trip-stats-card">
     <div class="trip-stats-card__header">
       <span class="trip-stats-card__title">TravelNet · Live</span>
       <span class="trip-stats-card__dot"></span>
     </div>
     <div class="trip-stats-grid">
-
       <div class="trip-stat">
-        <span class="trip-stat__value">
-          {% if status.on_road %}{{ days_on_road }}{% else %}—{% endif %}
-        </span>
+        <span class="trip-stat__value">{% if status.on_road %}{{ days_on_road }}{% else %}—{% endif %}</span>
         <span class="trip-stat__label">days on road</span>
       </div>
-
       <div class="trip-stat">
         <span class="trip-stat__value">{{ status.countries_visited }}</span>
         <span class="trip-stat__label">countries</span>
       </div>
-
       <div class="trip-stat trip-stat--wide">
-        <span class="trip-stat__value">
-          {% if status.km_travelled > 0 %}
-            {{ status.km_travelled | divided_by: 1000 }}k
-          {% else %}—{% endif %}
-        </span>
+        <span class="trip-stat__value">{% if status.km_travelled > 0 %}{{ status.km_travelled | divided_by: 1000 }}k{% else %}—{% endif %}</span>
         <span class="trip-stat__label">km travelled</span>
       </div>
-
       <div class="trip-stat trip-stat--location">
         <span class="trip-stat__label">currently</span>
         <span class="trip-stat__value trip-stat__value--location">{{ status.location }}</span>
       </div>
-
     </div>
     <div class="trip-stats-card__footer">
       Powered by <a href="/projects/">TravelNet</a> · updates each commit
@@ -239,3 +56,113 @@
   </div>
 
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" defer></script>
+<script>
+(function() {
+  var ACTIVE_LON = {{ status.active_lon }};
+  var ACTIVE_LAT = {{ status.active_lat }};
+
+  var stops = [
+    { lon: -0.1,   lat: 51.5,  label: 'UK',      above: true  },
+    { lon: -80.0,  lat: 37.0,  label: 'USA',     above: true  },
+    { lon: -122.3, lat: 47.6,  label: 'SEA',     above: true  },
+    { lon: 178.0,  lat: -18.0, label: 'FJI',     above: true  },
+    { lon: 134.0,  lat: -25.0, label: 'AUS',     above: false },
+    { lon: 172.0,  lat: -41.0, label: 'NZ',      above: false },
+    { lon: 102.0,  lat: 15.0,  label: 'SE Asia', above: true  },
+    { lon: -95.0,  lat: 56.0,  label: 'CAN',     above: true  },
+  ];
+
+  var segments = [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]];
+
+  function renderMap() {
+    if (typeof d3 === 'undefined' || typeof topojson === 'undefined') {
+      setTimeout(renderMap, 100);
+      return;
+    }
+
+    var W = 520, H = 260;
+    var svg = d3.select('#trip-map-svg');
+
+    var projection = d3.geoNaturalEarth1()
+      .scale(85)
+      .translate([W / 2, H / 2 + 10]);
+
+    var path = d3.geoPath().projection(projection);
+
+    var graticule = d3.geoGraticule().step([30, 30]);
+    svg.append('path')
+      .datum(graticule())
+      .attr('d', path)
+      .attr('fill', 'none')
+      .attr('stroke', 'rgba(180,210,180,0.04)')
+      .attr('stroke-width', 0.5);
+
+    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+      .then(function(r) { return r.json(); })
+      .then(function(world) {
+        var land = topojson.feature(world, world.objects.land);
+
+        svg.append('path')
+          .datum(land)
+          .attr('d', path)
+          .attr('fill', 'rgba(90,120,90,0.42)')
+          .attr('stroke', 'rgba(120,160,120,0.22)')
+          .attr('stroke-width', 0.5);
+
+        segments.forEach(function(seg) {
+          var from = stops[seg[0]], to = stops[seg[1]];
+          var line = { type: 'Feature', geometry: { type: 'LineString', coordinates: [[from.lon, from.lat], [to.lon, to.lat]] } };
+          svg.append('path').datum(line).attr('d', path)
+            .attr('fill', 'none').attr('stroke', 'rgba(196,150,90,0.18)')
+            .attr('stroke-width', 2.5).attr('stroke-dasharray', '5,4');
+          svg.append('path').datum(line).attr('d', path)
+            .attr('fill', 'none').attr('stroke', 'rgba(196,150,90,0.65)')
+            .attr('stroke-width', 1).attr('stroke-dasharray', '5,4');
+        });
+
+        stops.forEach(function(stop) {
+          var pos = projection([stop.lon, stop.lat]);
+          if (!pos) return;
+          var px = pos[0], py = pos[1];
+          var isActive = (stop.lon === ACTIVE_LON && stop.lat === ACTIVE_LAT);
+          var dotColor = isActive ? 'rgba(90,158,114,' : 'rgba(196,150,90,';
+
+          if (isActive) {
+            var ring = svg.append('circle')
+              .attr('cx', px).attr('cy', py).attr('r', 6)
+              .attr('fill', 'none').attr('stroke', 'rgba(90,158,114,0.5)').attr('stroke-width', 1);
+            (function animateRing() {
+              ring.attr('r', 6).attr('stroke-opacity', 0.7)
+                .transition().duration(2500).ease(d3.easeCubicOut)
+                .attr('r', 16).attr('stroke-opacity', 0)
+                .on('end', animateRing);
+            })();
+          }
+
+          svg.append('circle').attr('cx', px).attr('cy', py)
+            .attr('r', isActive ? 4.5 : 3.5).attr('fill', '#0d1610')
+            .attr('stroke', dotColor + (isActive ? '0.95)' : '0.65)')).attr('stroke-width', 1.5);
+
+          svg.append('circle').attr('cx', px).attr('cy', py)
+            .attr('r', isActive ? 2.5 : 1.8)
+            .attr('fill', dotColor + (isActive ? '0.95)' : '0.55)'));
+
+          svg.append('text').attr('x', px).attr('y', stop.above ? py - 8 : py + 14)
+            .attr('text-anchor', 'middle').attr('fill', 'rgba(238,238,228,0.65)')
+            .attr('font-size', '7').attr('font-family', 'JetBrains Mono, monospace')
+            .text(stop.label);
+        });
+      })
+      .catch(function() {});
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderMap);
+  } else {
+    renderMap();
+  }
+})();
+</script>

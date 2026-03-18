@@ -2,7 +2,7 @@
    DESIGN TOKENS
    ============================================================================= */
 :root {
-  /* Forest dark palette — deep green-black, like being under a canopy */
+  /* Forest dark palette â€” deep green-black, like being under a canopy */
   --bg:           #0b0f0d;
   --bg-raised:    #111710;
   --bg-card:      #161d18;
@@ -14,12 +14,12 @@
   --text-secondary:#96a093;
   --text-muted:    #566057;
 
-  --accent:        #6B8CAE;
-  --accent-bright: #8AABCD;
-  --accent-dim:    rgba(107,140,174,0.15);
-  --accent-glow:   rgba(107,140,174,0.07);
+  --accent:        #C4965A;
+  --accent-bright: #D4AA72;
+  --accent-dim:    rgba(196,150,90,0.15);
+  --accent-glow:   rgba(196,150,90,0.07);
 
-  /* Nature greens — used for live status, highlights */
+  /* Nature greens â€” used for live status, highlights */
   --green:         #5a9e72;
   --green-dim:     rgba(90,158,114,0.12);
   --green-glow:    rgba(90,158,114,0.06);
@@ -269,7 +269,7 @@ hr {
 }
 
 /* =============================================================================
-   HERO — HOME PAGE
+   HERO â€” HOME PAGE
    ============================================================================= */
 .hero {
   min-height: 100vh;
@@ -280,7 +280,7 @@ hr {
   overflow: hidden;
 }
 
-/* Photo background — add your image to assets/images/hero.jpg to activate */
+/* Photo background â€” add your image to assets/images/hero.jpg to activate */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -317,7 +317,7 @@ hr {
   pointer-events: none;
 }
 
-/* Ambient glow — visible when no photo, subtle accent when photo present */
+/* Ambient glow â€” visible when no photo, subtle accent when photo present */
 .hero-glow {
   position: absolute;
   inset: 0;
@@ -370,9 +370,9 @@ hr {
 }
 
 .hero-bio {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
-  max-width: 560px;
+  max-width: 480px;
   line-height: 1.75;
   margin-bottom: var(--space-2xl);
 }
@@ -410,6 +410,146 @@ hr {
   gap: var(--space-md);
   flex-wrap: wrap;
 }
+
+/* Two-column hero layout */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.hero-left {}
+
+/* =============================================================================
+   HERO PANEL â€” MAP + STATS
+   ============================================================================= */
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Trip map */
+.trip-map-card {
+  background: rgba(13,22,16,0.7);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.trip-map-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.trip-map-label__dot {
+  width: 5px;
+  height: 5px;
+  background: var(--green);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.trip-map-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Stats card */
+.trip-stats-card {
+  background: rgba(13,22,16,0.7);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space-md) var(--space-lg);
+  backdrop-filter: blur(8px);
+}
+
+.trip-stats-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.trip-stats-card__title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.trip-stats-card__dot {
+  width: 6px;
+  height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.trip-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.trip-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trip-stat--wide {
+  grid-column: 1 / -1;
+}
+
+.trip-stat--location {
+  grid-column: 1 / -1;
+}
+
+.trip-stat__value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.trip-stat__value--location {
+  font-size: 1.1rem;
+}
+
+.trip-stat__label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.trip-stats-card__footer {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-sm);
+}
+
+.trip-stats-card__footer a {
+  color: var(--accent);
+  transition: color 0.2s;
+}
+
+.trip-stats-card__footer a:hover { color: var(--accent-bright); }
 
 /* =============================================================================
    BUTTONS
@@ -665,7 +805,7 @@ hr {
    BLOG POST
    ============================================================================= */
 
-/* Post header image — add `image: /assets/images/yourfile.jpg` to post frontmatter */
+/* Post header image â€” add `image: /assets/images/yourfile.jpg` to post frontmatter */
 .post-hero-image {
   width: 100%;
   aspect-ratio: 16 / 7;
@@ -829,7 +969,7 @@ hr {
 
 .about-sidebar { position: sticky; top: 88px; }
 
-/* Portrait photo — add assets/images/portrait.jpg to activate */
+/* Portrait photo â€” add assets/images/portrait.jpg to activate */
 .portrait-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1137,6 +1277,9 @@ hr {
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-links { display: none; }
   .footer-right { grid-column: 2; }
+  /* Hero collapses to single column on tablet */
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-panel { display: none; } /* hide panel on tablet â€” hero text takes full width */
 }
 
 @media (max-width: 680px) {

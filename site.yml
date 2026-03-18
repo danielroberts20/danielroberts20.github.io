@@ -1,33 +1,34 @@
+# Status schedule — the active entry is the most recent `from` date that has passed.
 # Update this as the trip evolves. Commit = rebuild = status updates automatically.
 status_schedule:
-  - from: "2026-01-01"
+  - from: "2025-01-01"
     pill: "Pre-departure · Building TravelNet · UK"
     label: Pre-departure hardening
     description: Building and stress-testing TravelNet before the June 2026 departure. Ireland dry run complete.
-    location: "UK"
+    location: "London, UK"
     countries_visited: 0
     km_travelled: 0
     on_road: false
 
-  - from: "2026-06-06"
+  - from: "2026-06-01"
     pill: "In transit · USA Summer Camp · Lifeguarding"
     label: USA — Summer camp
     description: Lifeguarding at a summer camp in the USA. TravelNet collecting data from day one.
-    location: "New York, USA"
+    location: "USA"
     countries_visited: 1
     km_travelled: 5500
     on_road: true
-    departure_date: "2026-06-11"
+    departure_date: "2026-06-01"
 
   - from: "2026-08-15"
     pill: "In transit · Seattle → Fiji → Australia"
     label: En route to Australia
     description: Travelling west — Seattle, Fiji stopover, then landing in Australia on the WHV.
-    location: "NY → Seattle → Fiji"
+    location: "Seattle → Fiji"
     countries_visited: 2
     km_travelled: 11000
     on_road: true
-    departure_date: "2026-06-11"
+    departure_date: "2026-06-01"
 
   - from: "2026-09-15"
     pill: "Currently in Australia · WHV · TravelNet ML begins"
@@ -37,7 +38,7 @@ status_schedule:
     countries_visited: 3
     km_travelled: 17000
     on_road: true
-    departure_date: "2026-06-11"
+    departure_date: "2026-06-01"
 
   - from: "2027-09-01"
     pill: "Currently in New Zealand · WHV"
@@ -47,17 +48,17 @@ status_schedule:
     countries_visited: 4
     km_travelled: 21000
     on_road: true
-    departure_date: "2026-06-11"
+    departure_date: "2026-06-01"
 
   - from: "2028-04-01"
     pill: "Currently in SE Asia · Banana Pancake Trail"
     label: SE Asia — Backpacking
-    description: Backpacking through SE Asia — the Banana Pancake Trail. 3-4 months of dense travel data.
+    description: Backpacking through SE Asia — the Banana Pancake Trail. 3–4 months of dense travel data.
     location: "SE Asia"
     countries_visited: 8
     km_travelled: 32000
     on_road: true
-    departure_date: "2026-06-11"
+    departure_date: "2026-06-01"
 
   - from: "2028-08-01"
     pill: "Currently in Canada · WHV · Final leg"
@@ -67,7 +68,7 @@ status_schedule:
     countries_visited: 10
     km_travelled: 48000
     on_road: true
-    departure_date: "2026-06-11"
+    departure_date: "2026-06-01"
 
 nav:
   - title: About
@@ -80,31 +81,30 @@ nav:
     url: /cv/
 
 skills:
-  languages: [Python, SQL, Java]
+  languages: [Python, SQL, Ruby, JavaScript, HTML/CSS, Bash]
   ml: [Scikit-learn, aeon, PyTorch, HMMs, Clustering, Time Series, Anomaly Detection]
-  tools: [Docker, FastAPI, SQLite, Raspberry Pi, Tailscale, Git]
+  tools: [Docker, FastAPI, SQLite, Raspberry Pi, Tailscale, Git, Jekyll]
   currently_learning: [ML on real-world GPS data, Dashboard design, Data storytelling]
 
 timeline:
-  - year: 2028-2029
+  - year: 2028
     label: Canada WHV
     type: travel
-  - year: 2027-2028
+  - year: 2027
     label: SE Asia — Banana Pancake Trail
     type: travel
-  - year: 2027
+  - year: 2026–2027
     label: New Zealand WHV
     type: travel
-  - year: 2026-2027
+  - year: 2026
     label: Australia WHV — TravelNet ML begins
     type: highlight
   - year: 2026
     label: Summer camp lifeguarding, USA
     type: travel
-  - year: 2026
-    label: TravelNet system built and hardened
-    type: highlight
   - year: 2025
     label: CS degree awarded, dissertation on time series ML
     type: highlight
-
+  - year: 2025
+    label: TravelNet system built and hardened
+    type: highlight

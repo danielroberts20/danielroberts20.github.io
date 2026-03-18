@@ -43,7 +43,7 @@ permalink: /about/
           <span class="portrait-card__placeholder-icon">📷</span>
           Add assets/images/portrait.jpg
         </div>
-        <p class="portrait-card__caption">Canyonlands National Park during <a href="/_posts/2026-03-18-4n4-what-is-an-out-west-wednesday.md">4n4</a>!</p>
+        <p class="portrait-card__caption">Canyonlands National Park during <u><a href="{% post_url 2026-03-18-4n4-what-is-an-out-west-wednesday %}">4n4</a></u>!</p>
       </div>
       {% assign today = 'now' | date: "%Y-%m-%d" %}
       {% assign current_status = site.data.site.status_schedule[0] %}

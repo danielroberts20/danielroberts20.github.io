@@ -20,9 +20,9 @@ permalink: /cv/
     <p class="cv-section__title">Education</p>
     <div class="cv-entry">
       <div>
-        <h4 class="cv-entry__title">BSc Computer Science</h4>
-        <p class="cv-entry__sub">Dissertation: Comparing HMMs and AutoPlait for GPS travel segmentation using the aeon Python library</p>
-        <p class="cv-entry__desc">Focus on machine learning, time series analysis, and software engineering. Dissertation work directly informs the TravelNet ML pipeline.</p>
+        <h4 class="cv-entry__title">First Class BSc Computer Science</h4>
+        <p class="cv-entry__sub">A Slice of Time; Segmenting Human Activity with <i>aeon</i></p>
+        <p class="cv-entry__desc">Focus on machine learning, time series analysis, software engineering and algorithm comparison. Contribution to open-source Python library. Dissertation work links to the TravelNet ML pipeline.</p>
       </div>
       <span class="cv-entry__period">2022 – 2025</span>
     </div>
@@ -37,10 +37,10 @@ permalink: /cv/
         <p class="cv-entry__desc">
           Designed and built a live data collection system on Raspberry Pi (FastAPI, SQLite, Docker, Tailscale)
           collecting GPS traces, Apple Health metrics and multi-currency financial data across a 3-year international trip.
-          ML pipeline — clustering, HMMs, anomaly detection, time series regression — to be built on arrival in Australia (2026).
+          ML pipeline — clustering, segmentation, anomaly detection, time series regression — to be built during Australia leg (late 2026).
         </p>
       </div>
-      <span class="cv-entry__period">2025 – 2028</span>
+      <span class="cv-entry__period">2026 – 2029</span>
     </div>
 
     <div class="cv-entry">
@@ -48,8 +48,8 @@ permalink: /cv/
         <h4 class="cv-entry__title">Time Series ML Dissertation</h4>
         <p class="cv-entry__sub">Final year CS project</p>
         <p class="cv-entry__desc">
-          Benchmarked Hidden Markov Models against AutoPlait for unsupervised segmentation of GPS time series data.
-          Used the aeon Python library. Results inform TravelNet's GPS segmentation architecture.
+          Benchmarked variety of segmentation algorithms against AutoPlait for unsupervised segmentation of human activity recognition data.
+          Used the aeon Python library.
         </p>
       </div>
       <span class="cv-entry__period">2024 – 2025</span>
@@ -64,7 +64,19 @@ permalink: /cv/
         <p class="cv-entry__sub">Various · UK & USA</p>
         <p class="cv-entry__desc">
           Multi-year experience poolside — lifeguarding, teaching swimming across all ages and abilities,
-          and running structured swim sessions. Summer 2026: lifeguarding at a US summer camp.
+          and running structured swim sessions. Summer 2023-2026: lifeguarding and swim teaching at Camp Echo Lake, NY.
+        </p>
+      </div>
+      <span class="cv-entry__period">2023 – present</span>
+    </div>
+
+    <div class="cv-entry">
+      <div>
+        <h4 class="cv-entry__title">Service Team Support</h4>
+        <p class="cv-entry__sub">UK</p>
+        <p class="cv-entry__desc">
+          Multi-year experience poolside — lifeguarding, teaching swimming across all ages and abilities,
+          and running structured swim sessions. Summer 2023-2026: lifeguarding and swim teaching at Camp Echo Lake, NY.
         </p>
       </div>
       <span class="cv-entry__period">2019 – present</span>

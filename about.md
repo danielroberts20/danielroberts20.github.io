@@ -127,7 +127,7 @@ permalink: /about/
     <p>
       The trip isn't a gap year. It's a deliberate decision to spend a few years being
       somewhere uncomfortable, meeting people I wouldn't otherwise meet, experiencing the 
-      world, and generatingdata I couldn't collect any other way. TravelNet is how I make that data useful.
+      world, and generating data I couldn't collect any other way. TravelNet is how I make that data useful.
     </p>
 
     <div class="timeline">

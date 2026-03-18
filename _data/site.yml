@@ -5,7 +5,7 @@ status_schedule:
     label: Pre-departure hardening
     description: Building and stress-testing TravelNet before the June 2026 departure. Ireland dry run complete.
     location: "UK"
-    countries_visited: 0
+    countries_visited: —
     km_travelled: 0
     on_road: false
     active_lon: -0.1

@@ -2,8 +2,8 @@
 const nav = document.getElementById('site-nav');
 window.addEventListener('scroll', () => {
   nav.style.borderBottomColor = window.scrollY > 20
-    ? 'rgba(255,255,255,0.1)'
-    : 'rgba(255,255,255,0.07)';
+    ? 'rgba(180,210,180,0.12)'
+    : 'rgba(180,210,180,0.07)';
 }, { passive: true });
 
 // Mobile nav toggle

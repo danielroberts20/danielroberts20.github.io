@@ -30,6 +30,21 @@ permalink: /about/
     </div>
 
     <div class="about-sidebar">
+      <!-- Portrait photo — drop assets/images/portrait.jpg to activate -->
+      <div class="portrait-card">
+        {% assign portrait = '/assets/images/portrait.jpg' %}
+        <img
+          src="{{ portrait | relative_url }}"
+          alt="Dan Roberts"
+          class="portrait-card__photo"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+        <div class="portrait-card__placeholder" style="display:none;">
+          <span class="portrait-card__placeholder-icon">📷</span>
+          Add assets/images/portrait.jpg
+        </div>
+        <p class="portrait-card__caption">Drop a candid here — travelling, poolside, outdoors.</p>
+      </div>
       {% assign today = 'now' | date: "%Y-%m-%d" %}
       {% assign current_status = site.data.site.status_schedule[0] %}
       {% for entry in site.data.site.status_schedule %}

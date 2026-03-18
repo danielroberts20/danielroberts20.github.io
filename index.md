@@ -4,6 +4,8 @@ title: Home
 ---
 
 <section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
   <div class="hero-inner">
     <p class="hero-eyebrow">Dan Roberts</p>
     <h1 class="hero-title">Data scientist,<br><em>traveller</em>,<br>lifeguard.</h1>

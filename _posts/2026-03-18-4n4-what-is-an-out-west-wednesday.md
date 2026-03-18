@@ -17,8 +17,10 @@ After my second summer working at Camp Echo Lake (CEL) as a lifeguard and swim t
 
 For most people and their families, graduating from university is one of the most important and proud days of their lives, and for good reason. Years of late-night (more like all-night) library sessions, group project partners you can't believe even made it to univeristy, and a few too many heavy nights out all finally come to fruition in a day full of photos and caps and gowns. But I was willing to drop all of that in an instant because of the stories and pictures I had seen from the staff that were on a special programme at camp; **4n4**.
 
-![Two small tents in the foreground at a campsite. The background is the mountainous hills of the Arkansas river](/assets/images/posts/colorado_tents.jpg)
-Mine and George's tents at campsite along the Arkansas river after day 1 of white water rafting. The beginning of a brutal 9-day camping stretch.
+<figure>
+  <img src="/assets/images/posts/colorado_tents.jpg" alt="Two small tents in the foreground at a campsite. The background is the mountainous hills of the Arkansas river">
+  <figcaption>Mine and George's tents at campsite along the Arkansas river after day 1 of white water rafting. The beginning of a brutal 9-day camping stretch.</figcaption>
+</figure>
 
 ## What is 4n4
 

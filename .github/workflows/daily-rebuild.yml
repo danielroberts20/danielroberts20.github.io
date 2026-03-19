@@ -1,0 +1,17 @@
+name: Daily Rebuild
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Pages build
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.PAGES_ACCESS_TOKEN }}" \
+            -H "Accept: application/vnd.github.ant-man-preview+json" \
+            https://api.github.com/repos/danielroberts20/danielroberts20.github.io/pages/builds

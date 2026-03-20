@@ -13,7 +13,7 @@ title: Home
       <p class="hero-bio">
         CS graduate building a 3-year personal data science project from the road.
         Currently hardening TravelNet — a live system collecting location, health and
-        financial data across 6 countries — before departure in June 2026.
+        financial data across 9 countries — before departure in June 2026.
       </p>
       {% assign today = 'now' | date: "%Y-%m-%d" %}
       {% assign current_status = site.data.site.status_schedule[0] %}

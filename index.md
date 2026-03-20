@@ -50,11 +50,11 @@ title: Home
       {% for project in site.data.projects %}
         {% if project.featured %}
         <div class="project-card{% if project.name == 'TravelNet' %} project-card--featured{% endif %}">
-          {% if project.thumbnail %}
-            <img src="{{ project.thumbnail }}" alt="{{ project.name }}" class="post-card__thumb">
-          {% endif %}
           <div class="project-header">
-            <div>
+            {% if project.thumbnail %}
+              <img src="{{ project.thumbnail }}" alt="{{ project.name }}" class="post-card__thumb">
+            {% endif %}
+            <div class="project-header__text">
               <p class="project-tagline">{{ project.tagline }}</p>
               <h3 class="project-name">{{ project.name }}</h3>
             </div>

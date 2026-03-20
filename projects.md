@@ -21,10 +21,13 @@ permalink: /projects/
       {% for project in site.data.projects %}
       <div class="project-card{% if project.featured and forloop.first %} project-card--featured{% endif %}">
         <div class="project-header">
-          <div>
-            <p class="project-tagline">{{ project.tagline }}</p>
-            <h2 class="project-name">{{ project.name }}</h2>
-          </div>
+          {% if project.thumbnail %}
+              <img src="{{ project.thumbnail }}" alt="{{ project.name }}" class="post-card__thumb">
+            {% endif %}
+            <div class="project-header__text">
+              <p class="project-tagline">{{ project.tagline }}</p>
+              <h3 class="project-name">{{ project.name }}</h3>
+            </div>
           <span class="project-status project-status--{{ project.status }}">{{ project.status_label }}</span>
         </div>
 

@@ -622,6 +622,14 @@ hr {
   gap: var(--space-lg);
 }
 
+.project-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);

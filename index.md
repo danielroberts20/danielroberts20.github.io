@@ -50,6 +50,9 @@ title: Home
       {% for project in site.data.projects %}
         {% if project.featured %}
         <div class="project-card{% if project.name == 'TravelNet' %} project-card--featured{% endif %}">
+          {% if project.image %}
+            <img src="{{ project.image }}" alt="{{ project.name }}" class="project-card__image">
+          {% endif %}
           <div class="project-header">
             <div>
               <p class="project-tagline">{{ project.tagline }}</p>
@@ -66,6 +69,7 @@ title: Home
           <div class="project-links">
             {% if project.github %}<a href="{{ project.github }}" class="project-link" target="_blank" rel="noopener">↗ GitHub</a>{% endif %}
             {% if project.demo %}<a href="{{ project.demo }}" class="project-link" target="_blank" rel="noopener">↗ Live demo</a>{% endif %}
+            {% if project.pdf %}<a href="{{ project.pdf }}" class="project-link" target="_blank" rel="noopener">↗ Report</a>{% endif %}
           </div>
         </div>
         {% endif %}

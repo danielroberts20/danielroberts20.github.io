@@ -18,10 +18,12 @@
   github: https://github.com/danielroberts20/travelnet
   demo: https://danielroberts20.github.io/TravelNet
   featured: true
-  year: 2026–2029
+  year: 2026-2029
 
 - name: Time Series ML Dissertation
   tagline: Comparing HMMs and AutoPlait for GPS travel segmentation
+  image: /assets/images/projects/dissertation.jpg   # ← add this
+  pdf: /assets/pdf/report.pdf  # ← omit if no PDF
   description: >
     Final year CS dissertation exploring unsupervised segmentation of GPS time series data
     using Hidden Markov Models and AutoPlait via the aeon Python library.

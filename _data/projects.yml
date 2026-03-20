@@ -20,19 +20,19 @@
   featured: true
   year: 2026-2029
 
-- name: Time Series ML Dissertation
-  tagline: Comparing HMMs and AutoPlait for GPS travel segmentation
+- name: A Slice of Time; Segmenting Human Activity with aeon
+  tagline: Implementing and evaulating AutoPlait for human activity recognition
   thumbnail: /assets/images/projects/dissertation.jpg   # ← add this
   pdf: /assets/pdf/dissertation.pdf  # ← omit if no PDF
   description: >
-    Final year CS dissertation exploring unsupervised segmentation of GPS time series data
-    using Hidden Markov Models and AutoPlait via the aeon Python library.
+    Final year CS dissertation exploring unsupervised segmentation of human activity recognition (HAR) time series data
+    using 6 existing segmentation algorithms AutoPlait via the aeon Python library.
     Investigated how different approaches handle the noise and irregularity of real-world
-    mobility traces.
+    activity traces.
   detail: >
     Used the aeon library for time series machine learning, implementing and benchmarking
-    multiple approaches to segmenting continuous GPS tracks into meaningful travel episodes.
-    Results fed directly into the TravelNet ML architecture.
+    multiple approaches to segmenting human activity data into meaningful distinct segments (unlabelled activities).
+    Results showed no clear one-size-fits-all algorithm, highlighting the complexity of HAR and time series segmentation.
   tags: [Python, aeon, HMMs, AutoPlait, Time Series, GPS, Segmentation]
   status: complete
   status_label: Completed 2025

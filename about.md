@@ -116,13 +116,13 @@ permalink: /about/
 
   <div class="about-section">
     <span class="about-section__label">The trip</span>
-    <h2>3 years, 6 countries</h2>
+    <h2>3 years, 9 countries</h2>
     <p>
       June 2026: I leave. The rough itinerary is Philadelphia/DC → USA summer camp →
       Seattle → Fiji (3-night stopover) → Australia on a Working Holiday Visa →
       New Zealand on a WHV → SE Asia backpacking (the Banana Pancake Trail, 3–4 months) →
       Canada on a WHV. Somewhere in there, a dissertation-worthy dataset gets built (and hopefully,
-      some liflong memories and friends).
+      some lifelong memories and friends).
     </p>
     <p>
       The trip isn't a gap year. It's a deliberate decision to spend a few years being

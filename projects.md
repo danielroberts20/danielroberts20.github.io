@@ -20,7 +20,7 @@ permalink: /projects/
     <div class="projects-grid">
       {% for project in site.data.projects %}
       <div class="project-card{% if project.featured and forloop.first %} project-card--featured{% endif %}">
-        <div class="project-header">
+        <div class="project-header{% unless project.thumbnail %} project-header--no-thumb{% endunless %}">
           {% if project.thumbnail %}
               <img src="{{ project.thumbnail }}" alt="{{ project.name }}" class="post-card__thumb">
             {% endif %}
@@ -49,6 +49,9 @@ permalink: /projects/
           {% endif %}
           {% if project.demo %}
             <a href="{{ project.demo }}" class="project-link" target="_blank" rel="noopener">↗ Live demo</a>
+          {% endif %}
+          {% if project.pdf %}
+            <a href="{{ project.pdf }}" class="project-link" target="_blank" rel="noopener">↗ Report</a>
           {% endif %}
         </div>
       </div>

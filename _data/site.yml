@@ -76,7 +76,7 @@ status_schedule:
     label: Canada — Working Holiday Visa
     description: Final leg of the trip — Canada on a Working Holiday Visa.
     location: "Canada"
-    countries_visited: 10
+    countries_visited: 9
     km_travelled: 48000
     on_road: true
     departure_date: "2026-06-11"

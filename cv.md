@@ -54,7 +54,7 @@ permalink: /cv/
         <details class="cv-abstract">
           <summary>Abstract</summary>
           <p>Time series segmentation is a crucial step in the wider problem of human activity recognition. There are many algorithms that perform semantic segmentation of time series data, several of which are included in the open-source Python library <i>aeon</i>. How do these algorithms perform for the task of human activity recognition? Is there a better algorithm not yet included in <i>aeon</i>? This report implements a segmentation algorithm for time series data not currently present in the library; <span style="font-variant: small-caps;">AutoPlait</span>. We evaluate it and existing <i>aeon</i> algorithms on five human activity datasets and show that it performs in line with other algorithms currently present in <i>aeon</i>, achieving similar precision, recall and, F-score, in addition to providing information on any repeating or unique patterns in the data. We conclude with a critical evaluation of <span style="font-variant: small-caps;">AutoPlait</span> and its implementation, suggestion for further work, and a retrospective review of the project.</p>
-          <a href="{{ '/assets/pdf/report.pdf' | relative_url }}" target="_blank" rel="noopener"
+          <a href="{{ '/assets/pdf/dissertation.pdf' | relative_url }}" target="_blank" rel="noopener"
             class="cv-abstract__download"
             download>
             ↓ View dissertation (PDF)

@@ -23,7 +23,7 @@
 - name: Time Series ML Dissertation
   tagline: Comparing HMMs and AutoPlait for GPS travel segmentation
   thumbnail: /assets/images/projects/dissertation.jpg   # ← add this
-  pdf: /assets/pdf/report.pdf  # ← omit if no PDF
+  pdf: /assets/pdf/dissertation.pdf  # ← omit if no PDF
   description: >
     Final year CS dissertation exploring unsupervised segmentation of GPS time series data
     using Hidden Markov Models and AutoPlait via the aeon Python library.
@@ -38,4 +38,24 @@
   status_label: Completed 2025
   github: # add your dissertation repo if public
   featured: true
+  year: 2025
+
+- name: BLE Hide 'n' Seek
+  tagline: Proximity-based smart lighting control system framed as Hide & Seek
+  thumbnail: /assets/images/projects/ble.jpg   # ← add this
+  pdf: /assets/pdf/comp_networks_report.pdf  # ← omit if no PDF
+  description: >
+    Final year CS dissertation exploring unsupervised segmentation of GPS time series data
+    using Hidden Markov Models and AutoPlait via the aeon Python library.
+    Investigated how different approaches handle the noise and irregularity of real-world
+    mobility traces.
+  detail: >
+    Used the aeon library for time series machine learning, implementing and benchmarking
+    multiple approaches to segmenting continuous GPS tracks into meaningful travel episodes.
+    Results fed directly into the TravelNet ML architecture.
+  tags: [BLE, Matter, Smarthome, HomeAssistant, Python]
+  status: complete
+  status_label: Completed 2025
+  github: # add your dissertation repo if public
+  featured: false
   year: 2025

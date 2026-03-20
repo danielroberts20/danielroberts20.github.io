@@ -42,7 +42,7 @@
 
 - name: BLE Hide 'n' Seek
   tagline: Proximity-based smart lighting control system framed as Hide & Seek
-  thumbnail: /assets/images/projects/ble.jpg   # ← add this
+  thumbnail: /assets/images/projects/ble.png   # ← add this
   pdf: /assets/pdf/comp_networks_report.pdf  # ← omit if no PDF
   description: >
     Final year CS dissertation exploring unsupervised segmentation of GPS time series data

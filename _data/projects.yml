@@ -33,7 +33,7 @@
     Used the aeon library for time series machine learning, implementing and benchmarking
     multiple approaches to segmenting human activity data into meaningful distinct segments (unlabelled activities).
     Results showed no clear one-size-fits-all algorithm, highlighting the complexity of HAR and time series segmentation.
-  tags: [Python, aeon, HMMs, AutoPlait, Time Series, GPS, Segmentation]
+  tags: [Python, aeon, Unsupervised ML, Time Series, Segmentation, HMMs, AutoPlait, HAR, Open Source]
   status: complete
   status_label: Completed 2025
   github: # add your dissertation repo if public
@@ -53,9 +53,26 @@
     Used the aeon library for time series machine learning, implementing and benchmarking
     multiple approaches to segmenting continuous GPS tracks into meaningful travel episodes.
     Results fed directly into the TravelNet ML architecture.
-  tags: [BLE, Matter, Smarthome, HomeAssistant, Python]
+  tags: [BLE, CoAP, Matter, Thread, IoT, Raspberry Pi, MicroPython, Kalman Filter]
   status: complete
   status_label: Completed 2025
   github: # add your dissertation repo if public
   featured: false
   year: 2025
+
+- name: Runway Re-declaration Tool (RRT)
+  tagline: Proximity-based smart lighting control system framed as Hide & Seek
+  thumbnail: /assets/images/projects/compass.png   # ← add this
+  description: >
+    Second year software engineering group project following agile methodolgy with regular customer feedback.
+    Tool to automatically calculate and re-declare airport runway parameters when debris is present on the tarmac.
+  detail: >
+    Used JavaFX to build a full app.
+  tags: [Java, JavaFX, Agile, Software Engineering, Teamwork]
+  status: complete
+  status_label: Completed 2024
+  github: https://github.com/danielroberts20/Runway-Re-declaration-Tool
+  featured: false
+  year: 2024
+
+  

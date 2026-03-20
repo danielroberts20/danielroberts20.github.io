@@ -54,11 +54,11 @@ title: Home
             {% if project.thumbnail %}
               <img src="{{ project.thumbnail }}" alt="{{ project.name }}" class="post-card__thumb">
             {% endif %}
-            <div class="project-header__text">
+            <div class="project-header__meta">
               <p class="project-tagline">{{ project.tagline }}</p>
-              <h3 class="project-name">{{ project.name }}</h3>
+              <span class="project-status project-status--{{ project.status }}">{{ project.status_label }}</span>
             </div>
-            <span class="project-status project-status--{{ project.status }}">{{ project.status_label }}</span>
+            <h3 class="project-name">{{ project.name }}</h3>
           </div>
           <p class="project-desc">{{ project.description }}</p>
           <div class="project-tags">

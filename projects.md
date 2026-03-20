@@ -22,13 +22,13 @@ permalink: /projects/
       <div class="project-card{% if project.featured and forloop.first %} project-card--featured{% endif %}">
         <div class="project-header{% unless project.thumbnail %} project-header--no-thumb{% endunless %}">
           {% if project.thumbnail %}
-              <img src="{{ project.thumbnail }}" alt="{{ project.name }}" class="post-card__thumb">
-            {% endif %}
-            <div class="project-header__text">
-              <p class="project-tagline">{{ project.tagline }}</p>
-              <h3 class="project-name">{{ project.name }}</h3>
-            </div>
-          <span class="project-status project-status--{{ project.status }}">{{ project.status_label }}</span>
+            <img src="{{ project.thumbnail }}" alt="{{ project.name }}" class="post-card__thumb">
+          {% endif %}
+          <div class="project-header__meta">
+            <p class="project-tagline">{{ project.tagline }}</p>
+            <span class="project-status project-status--{{ project.status }}">{{ project.status_label }}</span>
+          </div>
+          <h3 class="project-name">{{ project.name }}</h3>
         </div>
 
         <p class="project-desc">{{ project.description }}</p>

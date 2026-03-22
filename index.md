@@ -41,7 +41,7 @@ title: Home
     <div class="home-section-header">
       <div class="home-section-header__text">
         <span class="section-label">Projects</span>
-        <h2 class="section-title">Things I'm building</h2>
+        <h2 class="section-title">Things I've built</h2>
       </div>
       <a href="/projects/" class="btn btn--secondary">All projects →</a>
     </div>

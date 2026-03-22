@@ -56,9 +56,40 @@
   tags: [BLE, CoAP, Matter, Thread, IoT, Raspberry Pi, MicroPython, Kalman Filter]
   status: complete
   status_label: Completed 2025
-  github: # add your dissertation repo if public
+  github: https://github.com/danielroberts20/BLE-Hide-Seek
   featured: false
   year: 2025
+
+- name: Scene Recognition
+  tagline: TAGLINE
+  #thumbnail: /assets/images/projects/ble.png   # ← add this
+  pdf: /assets/pdf/scene_recognition.pdf  # ← omit if no PDF
+  description: >
+    DESCRIPTION
+  detail: >
+    DETAILS
+  tags: []
+  status: complete
+  status_label: Completed 2025
+  github: https://github.com/danielroberts20/Scene-Recognition
+  featured: false
+  year: 2025
+
+- name: Image Filtering & Hybrid Images
+  tagline: TAGLINE
+  #thumbnail: /assets/images/projects/ble.png   # ← add this
+  description: >
+    DESCRIPTION
+  detail: >
+    DETAILS
+  tags: []
+  status: complete
+  status_label: Completed 2025
+  github: https://github.com/danielroberts20/Image-Filtering-and-Hybrid-Images
+  featured: false
+  year: 2025
+
+
 
 - name: Runway Re-declaration Tool (RRT)
   tagline: Proximity-based smart lighting control system framed as Hide & Seek
@@ -74,5 +105,6 @@
   github: https://github.com/danielroberts20/Runway-Re-declaration-Tool
   featured: false
   year: 2024
+  
 
   

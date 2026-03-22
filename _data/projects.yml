@@ -89,6 +89,36 @@
   featured: false
   year: 2025
 
+- name: Cluster Discovery
+  tagline: TAGLINE
+  #thumbnail: /assets/images/projects/ble.png   # ← add this
+  pdf: /assets/pdf/cluster_discovery.pdf  # ← omit if no PDF
+  description: >
+    DESCRIPTION
+  detail: >
+    DETAILS
+  tags: []
+  status: complete
+  status_label: Completed 2025
+  github: https://github.com/danielroberts20/Cluster-Discovery
+  featured: false
+  year: 2025
+
+- name: The Four Strongest
+  tagline: TAGLINE
+  #thumbnail: /assets/images/projects/ble.png   # ← add this
+  pdf: /assets/pdf/the_four_strongest.pdf  # ← omit if no PDF
+  description: >
+    DESCRIPTION
+  detail: >
+    DETAILS
+  tags: []
+  status: complete
+  status_label: Completed 2025
+  github: https://github.com/danielroberts20/The-Four-Strongest
+  featured: false
+  year: 2025
+
 
 
 - name: Runway Re-declaration Tool (RRT)

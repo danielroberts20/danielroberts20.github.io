@@ -976,6 +976,17 @@ hr {
   border-top: 1px solid var(--border);
 }
 
+.project-back-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: color 0.2s var(--ease);
+}
+
+.project-back-link:hover {
+  color: var(--accent);
+}
+
 .post-nav {
   display: grid;
   grid-template-columns: 1fr 1fr;

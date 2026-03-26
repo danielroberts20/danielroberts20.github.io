@@ -47,32 +47,32 @@ title: Home
     </div>
 
     <div class="projects-grid">
-      {% for project in site.data.projects %}
-        {% if project.featured %}
-        <div class="project-card{% if project.name == 'TravelNet' %} project-card--featured{% endif %}">
-          <div class="project-header{% unless project.thumbnail %} project-header--no-thumb{% endunless %}">
-            {% if project.thumbnail %}
-              <img src="{{ project.thumbnail }}" alt="{{ project.name }}" class="post-card__thumb">
-            {% endif %}
-            <div class="project-header__meta">
-              <p class="project-tagline">{{ project.tagline }}</p>
-              <span class="project-status project-status--{{ project.status }}">{{ project.status_label }}</span>
-            </div>
-            <h3 class="project-name">{{ project.name }}</h3>
+      {% assign featured_projects = site.projects | where: "featured", true | sort: "weight" %}
+      {% for project in featured_projects %}
+      <div class="project-card{% if forloop.first %} project-card--featured{% endif %}">
+        <div class="project-header{% unless project.thumbnail %} project-header--no-thumb{% endunless %}">
+          {% if project.thumbnail %}
+            <img src="{{ project.thumbnail }}" alt="{{ project.title }}" class="post-card__thumb">
+          {% endif %}
+          <div class="project-header__meta">
+            <p class="project-tagline">{{ project.tagline }}</p>
+            <span class="project-status project-status--{{ project.status }}">{{ project.status_label }}</span>
           </div>
-          <p class="project-desc">{{ project.description }}</p>
-          <div class="project-tags">
-            {% for tag in project.tags %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
-          <div class="project-links">
-            {% if project.github %}<a href="{{ project.github }}" class="project-link" target="_blank" rel="noopener">↗ GitHub</a>{% endif %}
-            {% if project.demo %}<a href="{{ project.demo }}" class="project-link" target="_blank" rel="noopener">↗ Live demo</a>{% endif %}
-            {% if project.pdf %}<a href="{{ project.pdf }}" class="project-link" target="_blank" rel="noopener">↗ Report</a>{% endif %}
-          </div>
+          <h3 class="project-name"><a href="{{ project.url | relative_url }}" style="color: inherit; text-decoration: none;">{{ project.title }}</a></h3>
         </div>
-        {% endif %}
+        <p class="project-desc">{{ project.excerpt | strip_html }}</p>
+        <div class="project-tags">
+          {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        <div class="project-links">
+          <a href="{{ project.url | relative_url }}" class="project-link">→ View project</a>
+          {% if project.github %}<a href="{{ project.github }}" class="project-link" target="_blank" rel="noopener">↗ GitHub</a>{% endif %}
+          {% if project.demo %}<a href="{{ project.demo }}" class="project-link" target="_blank" rel="noopener">↗ Live demo</a>{% endif %}
+          {% if project.pdf %}<a href="{{ project.pdf }}" class="project-link" target="_blank" rel="noopener">↗ Report</a>{% endif %}
+        </div>
+      </div>
       {% endfor %}
     </div>
   </div>

@@ -1,0 +1,51 @@
+---
+layout: base
+---
+
+<article class="post-wrapper">
+  <header class="post-header">
+    <div class="post-meta-top">
+      <span class="project-status project-status--{{ page.status }}">{{ page.status_label }}</span>
+      {% if page.year %}<span class="post-date">{{ page.year }}</span>{% endif %}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.tagline %}<p class="post-subtitle">{{ page.tagline }}</p>{% endif %}
+  </header>
+
+  {% if page.thumbnail %}
+  <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" class="post-hero-image">
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    {% if page.tags %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="project-links" style="margin-top: 2rem;">
+      {% if page.github %}
+        <a href="{{ page.github }}" class="project-link" target="_blank" rel="noopener">↗ GitHub</a>
+      {% endif %}
+      {% if page.demo %}
+        <a href="{{ page.demo }}" class="project-link" target="_blank" rel="noopener">↗ Live demo</a>
+      {% endif %}
+      {% if page.pdf %}
+        <a href="{{ page.pdf }}" class="project-link" target="_blank" rel="noopener">↗ Report</a>
+      {% endif %}
+    </div>
+
+    <nav class="post-nav">
+      <a href="/projects/" class="post-nav__link post-nav__link--prev">
+        <span class="post-nav__label">← Back</span>
+        <span class="post-nav__title">All Projects</span>
+      </a>
+    </nav>
+  </footer>
+</article>

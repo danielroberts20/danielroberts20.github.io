@@ -29,19 +29,20 @@ layout: base
     </div>
     {% endif %}
 
-    <div class="project-links" style="margin-top: 2rem;">
-      {% if page.github %}
-        <a href="{{ page.github }}" class="project-link" target="_blank" rel="noopener">↗ GitHub</a>
-      {% endif %}
+    <h4 class="project-page-links__heading">Links</h4>
+    <div class="project-page-links">
       {% if page.demo %}
-        <a href="{{ page.demo }}" class="project-link" target="_blank" rel="noopener">↗ Live demo</a>
+        <a href="{{ page.demo }}" class="btn btn--primary" target="_blank" rel="noopener">↗ Live demo</a>
+      {% endif %}
+      {% if page.github %}
+        <a href="{{ page.github }}" class="btn btn--secondary" target="_blank" rel="noopener">↗ GitHub</a>
       {% endif %}
       {% if page.pdf %}
-        <a href="{{ page.pdf }}" class="project-link" target="_blank" rel="noopener">↗ Report</a>
+        <a href="{{ page.pdf }}" class="btn btn--secondary" target="_blank" rel="noopener">↗ Report</a>
       {% endif %}
     </div>
 
-    <nav class="post-nav">
+    <nav class="post-nav project-page-nav">
       <a href="/projects/" class="post-nav__link post-nav__link--prev">
         <span class="post-nav__label">← Back</span>
         <span class="post-nav__title">All Projects</span>

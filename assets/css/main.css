@@ -960,31 +960,20 @@ hr {
   text-transform: uppercase;
   color: var(--text-muted);
   margin-top: var(--space-xl);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 .project-page-links {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);
-  margin-bottom: var(--space-xl);
 }
 
 .project-page-nav {
+  display: block;
   margin-top: var(--space-2xl);
   padding-top: var(--space-xl);
   border-top: 1px solid var(--border);
-}
-
-.project-back-link {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  transition: color 0.2s var(--ease);
-}
-
-.project-back-link:hover {
-  color: var(--accent);
 }
 
 .post-nav {

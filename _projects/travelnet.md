@@ -5,7 +5,7 @@ tags: [Python, FastAPI, SQLite, Docker, Scikit-learn, HMMs, Time Series, Raspber
 status: live
 status_label: Live & collecting data
 github: https://github.com/danielroberts20/travelnet
-demo: https://danielroberts20.github.io/TravelNet
+demo: https://travelnet.dev
 featured: true
 year: "2026–2029"
 weight: 1

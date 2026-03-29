@@ -13,9 +13,9 @@ excerpt: >
 
 Intro
 
-## But I love my terminal!
+## What?! I love my terminal!
 
-Discuss the need for the dashboard, why I decided to implement one, how I decided what should be included
+So do I! But after typing docker stop travelnet, docker up travelnet hundreds of times it does start to get a bit tedious. Discuss the need for the dashboard, why I decided to implement one, how I decided what should be included
 
 ## Nav
 
@@ -73,10 +73,42 @@ The whole point of the having a server and not just storing all of this on my ph
 
 ### Logs
 
+Anyone will tell you that logs are both the most and least useful output of any complex system. They'll either tell you exactly what is wrong and sometimes even suggest how to fix it, or they will be a giant wall of text that you're not sure is English or the UTF-8 encoding of a PDF. This wall of text became even more of a problem for me once `docker compose logs` started following not just the TravelNet container, but also the Dashboard container and the `nginx` container too (used for TLS/HTTPS).
+
+To thin out the logs a bit, the dashboard only follows the TravelNet container's logs and I added a custom logging level, UPLOAD, that applies to ingestion messages that tend to clog the output. The log terminal allows me to easily change between logging levels so that I never miss anything.
+
 <figure>
   <img src="/assets/images/posts/logs_dashboard.png" alt="">
+  <figcaption>The log terminal clearly shows some Wise ingest messages. The logging levels can be seen at in top left.</figcaption>
+</figure>
+
+### Backups
+a
+
+<figure>
+  <img src="/assets/images/posts/backup_dashboard.png" alt="">
   <figcaption></figcaption>
 </figure>
+
+### Location
+a
+
+<figure>
+  <img src="/assets/images/posts/location_dashboard.png" alt="">
+  <figcaption></figcaption>
+</figure>
+
+### Upload
+a
+
+### Config
+a
+
+<figure>
+  <img src="/assets/images/posts/config_dashboard.png" alt="">
+  <figcaption></figcaption>
+</figure>
+
 
 ## Do you even use it?
 

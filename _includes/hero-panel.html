@@ -1,19 +1,35 @@
 {% assign today = 'now' | date: "%Y-%m-%d" %}
-{% assign status = site.data.site.status_schedule[0] %}
-{% for entry in site.data.site.status_schedule %}
-  {% if entry.from <= today %}
-    {% assign status = entry %}
+{% assign travel = site.data.travel %}
+
+{% comment %} Find current leg: last one whose arrival date has passed {% endcomment %}
+{% assign current_leg = nil %}
+{% for leg in travel.legs %}
+  {% assign arrival = leg.actual.arrival | default: leg.planned.arrival %}
+  {% if arrival <= today %}
+    {% assign current_leg = leg %}
   {% endif %}
 {% endfor %}
 
-{% if status.on_road %}
-  {% assign dep_ts = status.departure_date | date: "%s" | plus: 0 %}
+{% if current_leg %}
+  {% assign dep_ts = travel.meta.trip_start | date: "%s" | plus: 0 %}
   {% assign now_ts = today | date: "%s" | plus: 0 %}
   {% assign diff_s = now_ts | minus: dep_ts %}
   {% assign days_on_road = diff_s | divided_by: 86400 %}
+  {% assign stat_km = current_leg.display.km_cumulative %}
+  {% assign stat_countries = current_leg.display.countries_cumulative %}
+  {% assign stat_location = current_leg.display.location %}
+  {% assign active_lon = current_leg.map.lon %}
+  {% assign active_lat = current_leg.map.lat %}
 {% else %}
   {% assign days_on_road = 0 %}
+  {% assign stat_km = 0 %}
+  {% assign stat_countries = 0 %}
+  {% assign stat_location = travel.meta.display.location %}
+  {% assign active_lon = travel.meta.map.lon %}
+  {% assign active_lat = travel.meta.map.lat %}
 {% endif %}
+
+{% assign last_seg_idx = travel.map_route.size | minus: 2 %}
 
 <div class="hero-panel">
 
@@ -34,24 +50,24 @@
     </div>
     <div class="trip-stats-grid">
       <div class="trip-stat">
-        <span class="trip-stat__value">{% if status.on_road %}{{ days_on_road }}{% else %}—{% endif %}</span>
+        <span class="trip-stat__value">{% if current_leg %}{{ days_on_road }}{% else %}—{% endif %}</span>
         <span class="trip-stat__label">days on road</span>
       </div>
       <div class="trip-stat">
-        <span class="trip-stat__value">{{ status.countries_visited }}</span>
+        <span class="trip-stat__value">{{ stat_countries }}</span>
         <span class="trip-stat__label">countries</span>
       </div>
       <div class="trip-stat trip-stat--wide">
-        <span class="trip-stat__value">{% if status.km_travelled > 0 %}{{ status.km_travelled | divided_by: 1000 }}k{% else %}—{% endif %}</span>
+        <span class="trip-stat__value">{% if stat_km > 0 %}{{ stat_km | divided_by: 1000 }}k{% else %}—{% endif %}</span>
         <span class="trip-stat__label">km travelled</span>
       </div>
       <div class="trip-stat trip-stat--location">
         <span class="trip-stat__label">currently</span>
-        <span class="trip-stat__value trip-stat__value--location">{{ status.location }}</span>
+        <span class="trip-stat__value trip-stat__value--location">{{ stat_location }}</span>
       </div>
     </div>
     <div class="trip-stats-card__footer">
-      Powered by <a href="/projects/">TravelNet</a> · updates each commit
+      Powered by <a href="/projects/">TravelNet</a> · updates daily
     </div>
   </div>
 
@@ -61,21 +77,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" defer></script>
 <script>
 (function() {
-  var ACTIVE_LON = {{ status.active_lon }};
-  var ACTIVE_LAT = {{ status.active_lat }};
+  var ACTIVE_LON = {{ active_lon }};
+  var ACTIVE_LAT = {{ active_lat }};
 
-  var stops = [
-    { lon: -0.1,   lat: 51.5,  label: 'UK',      above: true  },
-    { lon: -80.0,  lat: 37.0,  label: 'USA',     above: true  },
-    { lon: -122.3, lat: 47.6,  label: 'SEA',     above: true  },
-    { lon: 178.0,  lat: -18.0, label: 'FJI',     above: true  },
-    { lon: 134.0,  lat: -25.0, label: 'AUS',     above: false },
-    { lon: 172.0,  lat: -41.0, label: 'NZ',      above: false },
-    { lon: 102.0,  lat: 15.0,  label: 'SE Asia', above: true  },
-    { lon: -95.0,  lat: 56.0,  label: 'CAN',     above: true  },
+  var stops = [{% for stop in travel.map_route %}
+    { lon: {{ stop.lon }}, lat: {{ stop.lat }}, label: '{{ stop.label }}', above: {{ stop.above }} }{% unless forloop.last %},{% endunless %}{% endfor %}
   ];
 
-  var segments = [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]];
+  var segments = [{% for i in (0..last_seg_idx) %}{% assign j = i | plus: 1 %}[{{ i }},{{ j }}]{% unless forloop.last %},{% endunless %}{% endfor %}];
 
   function renderMap() {
     if (typeof d3 === 'undefined' || typeof topojson === 'undefined') {

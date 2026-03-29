@@ -46,16 +46,19 @@ permalink: /about/
         <p class="portrait-card__caption">Canyonlands National Park during <u><a href="{% post_url 2026-03-18-4n4-what-is-an-out-west-wednesday %}">4n4</a></u>!</p>
       </div>
       {% assign today = 'now' | date: "%Y-%m-%d" %}
-      {% assign current_status = site.data.site.status_schedule[0] %}
-      {% for entry in site.data.site.status_schedule %}
-        {% if entry.from <= today %}
-          {% assign current_status = entry %}
+      {% assign current_leg = nil %}
+      {% for leg in site.data.travel.legs %}
+        {% assign arrival = leg.actual.arrival | default: leg.planned.arrival %}
+        {% if arrival <= today %}
+          {% assign current_leg = leg %}
         {% endif %}
       {% endfor %}
+      {% assign status_label = current_leg.display.label | default: site.data.travel.meta.display.label %}
+      {% assign status_description = current_leg.display.description | default: site.data.travel.meta.display.description %}
       <div class="sidebar-card">
         <span class="sidebar-card__label">Currently</span>
-        <h4 class="sidebar-card__title">{{ current_status.label }}</h4>
-        <p>{{ current_status.description }}</p>
+        <h4 class="sidebar-card__title">{{ status_label }}</h4>
+        <p>{{ status_description }}</p>
         <a href="https://github.com/danielroberts20" class="btn btn--secondary" target="_blank" rel="noopener" style="width:100%;justify-content:center;">↗ GitHub</a>
       </div>
 

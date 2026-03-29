@@ -16,15 +16,17 @@ title: Home
         financial data across 9 countries — before departure in June 2026.
       </p>
       {% assign today = 'now' | date: "%Y-%m-%d" %}
-      {% assign current_status = site.data.site.status_schedule[0] %}
-      {% for entry in site.data.site.status_schedule %}
-        {% if entry.from <= today %}
-          {% assign current_status = entry %}
+      {% assign current_leg = nil %}
+      {% for leg in site.data.travel.legs %}
+        {% assign arrival = leg.actual.arrival | default: leg.planned.arrival %}
+        {% if arrival <= today %}
+          {% assign current_leg = leg %}
         {% endif %}
       {% endfor %}
+      {% assign status_pill = current_leg.display.pill | default: site.data.travel.meta.display.pill %}
       <div class="hero-status">
         <span class="hero-status__dot"></span>
-        {{ current_status.pill }}
+        {{ status_pill }}
       </div>
       <div class="hero-ctas">
         <a href="/projects/" class="btn btn--primary">View Projects</a>

@@ -3,6 +3,7 @@ layout: post
 title: "Getting tired of terminals"
 subtitle: "Green text on a black background just isn't cutting it anymore"
 date: 2026-03-28
+image: /assets/images/posts/dashboard_thumb.png
 categories: [Technical]
 tags: [TravelNet, Python, Flask, Dashboard, UI, Frontend]
 read_time: 8

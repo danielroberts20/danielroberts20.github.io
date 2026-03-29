@@ -1,0 +1,35 @@
+name: Sync travel data from TravelNet
+
+on:
+  repository_dispatch:
+    types: [travel-data-updated]
+  schedule:
+    - cron: '0 0 * * *'  # daily fallback at midnight UTC
+  workflow_dispatch:      # manual trigger for testing
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch travel.yml from TravelNet
+        run: |
+          curl -sSf \
+            "https://raw.githubusercontent.com/danielroberts20/TravelNet/main/travel.yml" \
+            -o _data/travel.yml
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/travel.yml
+          if git diff --cached --quiet; then
+            echo "No changes to travel.yml — nothing to commit"
+          else
+            git commit -m "chore: sync travel.yml from TravelNet"
+            git push
+          fi

@@ -1,6 +1,6 @@
 # travel.yml
-# Synced automatically from github.com/danielroberts20/TravelNet — do not edit directly.
-# Source of truth: TravelNet/travel.yml on the refactor branch.
+# Single source of truth for the TravelNet trip itinerary.
+# Consumed by: cron/push_public_stats.py, docs site, portfolio, README.
 #
 # Status inference (in priority order):
 #   1. meta.status_override — set this if auto-inference is wrong
@@ -15,11 +15,11 @@
 #   Set meta.current_leg_override to force a specific leg id.
 
 meta:
-  status_override: null
-  current_leg_override: null
+  status_override: null       # null | pre_departure | travelling | finished
+  current_leg_override: null  # null | leg id e.g. "australia"
   base_country: "UK"
   base_city: "London"
-  trip_start: "2026-06-11"
+  trip_start: "2026-06-11"    # date of first departure — used for countdown
   display:
     pill: "Pre-departure · Building TravelNet"
     label: "London, UK"
@@ -121,7 +121,7 @@ legs:
       - id: usa_post_camp
         name: "Post Camp Labouring"
         planned:
-          arrival: "2026-08-16"
+          arrival: "2026-06-16"
           departure: "2026-09-02"
         actual:
           arrival: null
@@ -226,7 +226,7 @@ legs:
 
   - id: se_asia
     name: "SE Asia"
-    country: null
+    country: null           # multiple countries — resolved per-country in DB
     emoji: "🌏"
     visa: "Tourist / visa on arrival (varies by country)"
     stopover: false
@@ -259,7 +259,7 @@ legs:
     stopover: false
     planned:
       arrival: "2028-04-01"
-      departure: null
+      departure: null         # open-ended
     actual:
       arrival: null
       departure: null

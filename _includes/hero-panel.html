@@ -54,7 +54,7 @@
         <span class="trip-stat__label">days on road</span>
       </div>
       <div class="trip-stat">
-        <span class="trip-stat__value">{{ stat_countries }}</span>
+        <span class="trip-stat__value">{% if stat_countries > 0 %}{{ stat_countries }}{% else %}—{% endif %}</span>
         <span class="trip-stat__label">countries</span>
       </div>
       <div class="trip-stat trip-stat--wide">

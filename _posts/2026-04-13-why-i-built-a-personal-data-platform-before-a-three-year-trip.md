@@ -117,4 +117,4 @@ And that's okay. The goal was never to build a product. It was to build somethin
 
 Departure: June 2026. The flights start flying, the money starts draining (hopefully not *too* much), and the data starts flowing.
 
-> *Get ready for Dan's Travel Wrapped:tm:, coming soon.*
+> *Get ready for Dan's Travel Wrapped™, coming soon.*

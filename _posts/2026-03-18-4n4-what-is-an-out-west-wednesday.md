@@ -6,52 +6,52 @@ date: 2026-03-18
 categories: [Travel]
 image: /assets/images/posts/delicate.jpg
 tags: [Camp, Echo Lake, 4n4, Summer]
-read_time: 7
+read_time: 6
 excerpt: >
   In November 2024, after 2 years of working as a lifeguard at Camp Echo Lake, I
   got an email that was more exciting than my university acceptance and dissertation
   results combined. I was about to get *paid* to do most people's bucket list trip.
 ---
 
-After my second summer working at Camp Echo Lake (CEL) as a lifeguard and swim teacher in 2024, I was more than happy to come back the following year to do it all over again; the weather, the friends, the campers, the campfires were something that had become ingrained in to my summer routine. There were just two things putting me off; my graduation, and stories about one of the other jobs on camp.
+After my second summer at Camp Echo Lake (CEL) as a lifeguard and swim teacher, I was more than happy to come back in 2025 to do it all again. There was just one thing giving me pause — stories about a special programme on camp called **4n4**.
 
-For most people and their families, graduating from university is one of the most important and proud days of their lives, and for good reason. Years of late-night (more like all-night) library sessions, group project partners you can't believe even made it to university, and a few too many heavy nights out all finally come to fruition in a day full of photos and caps and gowns. But I was willing to drop all of that in an instant because of the stories and pictures I had seen from the staff that were on a special programme at camp; **4n4**.
+## What is 4n4?
+
+CEL summers are 7 weeks long, usually late June through mid-August. The name 4n4 came from when the season was 8 weeks: **4** weeks at camp a**n**d **4** weeks travelling *Out West*. Think Teen Tour, but in-house. The 15-year-old campers fly from New York and spend four weeks road-tripping across Colorado, Arizona, Wyoming and Utah — places most people only ever see on a screensaver. They spend their entire camp career dreaming about it.
+
+For the group of 14-year-olds I had in 2024, that summer was less than a year away. And it just so happened to clash with my graduation.
 
 <figure>
   <img src="/assets/images/posts/colorado_tents.jpg" alt="Two small tents in the foreground at a campsite. The background is the mountainous hills of the Arkansas river">
   <figcaption>Mine and George's tents at a campsite along the Arkansas river after day 1 of white water rafting. The beginning of a brutal 9-day camping stretch.</figcaption>
 </figure>
 
-## What is 4n4
-
-Summers at CEL are 7 weeks long; usually from late June until mid-August. The name 4n4 originally came from when the camp season was 8 weeks long, and was split in to **4** weeks at camp a**n**d **4** weeks travelling *Out West*.
-
-If you know about Teen Tour programmes in the US then 4n4 is essentially an in-house version. The 15 year old campers go on a 4-week long roadtrip, flying from New York and travelling across Colorado, Arizona, Wyoming and Utah. The campers spend their entire camp career hearing stories and seeing older siblings and cousins go on the 4n4 trip, dreaming of the day they finally get to experience it for themselves. It just so happens that, for the group of campers I had in 2024, that day was less than a year away.
-
-### The Upper Village Boys '24
-
-I had the 14 year old boys as my campers in 2024, and I can promise you they are some of the kindest, most genuine, funniest, frustrating, tiring, inspiring young adults I have ever known. Most of them had been at camp for at least 5 years, some having older siblings who had also been at camp or even parents who had come to camp (some even first met at camp!). When I say the kids look forward to this trip more than anything I do really mean more than *anything*. It was set: June-August 2025 was the summer they had waited their whole lives for. It just so happens that July 2025 was my graduation. So, clearly the next question is:
-
 ## Is it really worth missing graduation?
 
-Obviously I can't answer that question for you, but for me.
+Obviously I can't answer that for you, but for me: **100% absolutely it is.**
 
-**100% absolutely it is.**
+I get to see sights that 99% of the world will never see, with some of the best friends I've ever made, with a group of campers I genuinely love — all completely for free, and I'll actually *get paid*. I loved university. But I think anyone would call me an idiot for trading a month of free travel through some of the most incredible landscapes on earth for one day in a nice suit and some fancy pictures.
 
-Not only do I get to see sights that 99% of the world will never see, I get to do it with some of the best friends I've ever made, with a group of campers I genuinely love and care for so much, all completely for free, and I'll actually *get paid!?* I loved my time at university, I made amazing friends, got back in to competitive swimming for the first time in 5 years, tried American football for the first time, and had access to technology through my modules I would have never thought I'd be able to. But I think anyone would call me an idiot for throwing away a month of free travel to some of the most incredible places in the world for 1 day in a nice suit and some fancy pictures.
+I knew this the second I left camp in 2024. I sent an email a few weeks after getting home, (professionally) pleading to be considered for 4n4 in 2025. Then I waited.
 
-And I knew this the second I left camp in 2024, before I had even begun my final year at university. I sent an email off a few weeks after I got home, (professionally) pleading to be considered for the 4n4 programme in 2025. And after 3 brutally long months; contract day arrived.
+## Contract day
 
-## Contract day drama
+Three months later, I was sitting in the computing lab stressing over a computer vision coursework when my staff group chat started lighting up. Contracts were going out.
 
-Talk about everyone else getting a contract but 4n4 staff.
+CEL sends them in batches by position — camper specialists first, then group leaders, then activity staff. I'd been told that 4n4 staff were always last, as a deliberate gesture. So when two hours had passed and every other waterfront lifeguard had a contract and I hadn't, I was stuck with two possibilities: I'd been picked for 4n4, or I hadn't been asked back at all.
 
-> We are pleased to offer you a place on the 4n4 programme for summer 2025.
+The convolutional neural network could wait.
 
-## ?
+Another hour went by. Then another. More 4n4 confirmations trickled into the chat — friends I'd worked alongside for two summers — and still nothing for me. By 9pm the lab was almost empty. I packed up my bag, accepted my fate, and headed home to heat up a very sad pasta.
 
-## So, what is an 'Out West Wednesday'?
+As I put my laptop away, my phone buzzed. An email from Echo Lake:
 
-To be honest, I still don't know. From what I gather from the campers, it's just an excuse to show to all your friends, both inside and outside of camp, that you went on one of the most incredible trips you can take, not only in the USA, but in the world as a whole, and I think that's as good enough reason as any.
+> **Daniel, we are pleased to offer you a place on the 4n4 programme for summer 2025.**
 
-So, if you want to see more of all the rock-climbing, boat-driving, rodeo-riding fun, even on days that don't begin with W, stick around.
+Every hour of that wait was immediately worth it. In that moment I would have gladly handed over the rest of my university life just for it to already be June 2025.
+
+## So, what actually *is* an Out West Wednesday?
+
+Honestly, I'm still not entirely sure. From what I can gather, it's just an excuse to show the world that you went on one of the most incredible trips you can take — not just in the USA, but anywhere — and I think that's reason enough.
+
+If you want to see the rock-climbing, boat-driving, rodeo-riding chaos that followed, even on days that don't begin with W, stick around.
